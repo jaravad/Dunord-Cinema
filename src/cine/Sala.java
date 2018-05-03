@@ -7,6 +7,8 @@ package cine;
 
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 /**
@@ -22,7 +24,152 @@ public class Sala extends javax.swing.JFrame {
         initComponents();
         AWTUtilities.setWindowOpaque(this, false);
         setLocationRelativeTo(null);
+        sillas=new ArrayList<Silla>();
+        Silla a1=new Silla(A1,true);
+        Silla a2=new Silla(A2,true);
+        Silla a3=new Silla(A3,true);
+        Silla a4=new Silla(A4,true);
+        Silla a5=new Silla(A5,true);
+        Silla a6=new Silla(A6,true);
+        Silla a7=new Silla(A7,true);
+        Silla a8=new Silla(A8,true);
+        Silla a9=new Silla(A9,true);
+        Silla a10=new Silla(A10,true);
+        Silla b1=new Silla(B1,true);
+        Silla b2=new Silla(B2,true);
+        Silla b3=new Silla(B3,true);
+        Silla b4=new Silla(B4,true);
+        Silla b5=new Silla(B5,true);
+        Silla b6=new Silla(B6,false);
+        Silla b7=new Silla(B7,true);
+        Silla b8=new Silla(B8,true);
+        Silla b9=new Silla(B9,true);
+        Silla b10=new Silla(B10,true);
+        Silla c1=new Silla(C1,true);
+        Silla c2=new Silla(C2,true);
+        Silla c3=new Silla(C3,true);
+        Silla c4=new Silla(C4,true);
+        Silla c5=new Silla(C5,true);
+        Silla c6=new Silla(C6,false);
+        Silla c7=new Silla(C7,true);
+        Silla c8=new Silla(C8,true);
+        Silla c9=new Silla(C9,true);
+        Silla c10=new Silla(C10,true);
+        Silla d1=new Silla(D1,true);
+        Silla d2=new Silla(D2,true);
+        Silla d3=new Silla(D3,true);
+        Silla d4=new Silla(D4,true);
+        Silla d5=new Silla(D5,true);
+        Silla d6=new Silla(D6,true);
+        Silla d7=new Silla(D7,true);
+        Silla d8=new Silla(D8,true);
+        Silla d9=new Silla(D9,true);
+        Silla d10=new Silla(D10,true);
+        Silla e1=new Silla(E1,true);
+        Silla e2=new Silla(E2,true);
+        Silla e3=new Silla(E3,true);
+        Silla e4=new Silla(E4,false);
+        Silla e5=new Silla(E5,true);
+        Silla e6=new Silla(E6,true);
+        Silla e7=new Silla(E7,true);
+        Silla e8=new Silla(E8,true);
+        Silla e9=new Silla(E9,true);
+        Silla e10=new Silla(E10,true);
+        Silla f1=new Silla(F1,false);
+        Silla f2=new Silla(F2,true);
+        Silla f3=new Silla(F3,true);
+        Silla f4=new Silla(F4,false);
+        Silla f5=new Silla(F5,true);
+        Silla f6=new Silla(F6,true);
+        Silla f7=new Silla(F7,true);
+        Silla f8=new Silla(F8,true);
+        Silla f9=new Silla(F9,true);
+        Silla f10=new Silla(F10,true);
+        Silla g1=new Silla(G1,false);
+        Silla g2=new Silla(G2,false);
+        Silla g3=new Silla(G3,false);
+        Silla g4=new Silla(G4,false);
+        Silla g5=new Silla(G5,true);
+        Silla g6=new Silla(G6,true);
+        Silla g7=new Silla(G7,true);
+        Silla g8=new Silla(G8,true);
+        Silla g9=new Silla(G9,true);
+        Silla g10=new Silla(G10,true);
+        sillas.add(a1);
+        sillas.add(a2);
+        sillas.add(a3);
+        sillas.add(a4);
+        sillas.add(a5);
+        sillas.add(a6);
+        sillas.add(a7);
+        sillas.add(a8);
+        sillas.add(a9);
+        sillas.add(a10);
+        sillas.add(b1);
+        sillas.add(b2);
+        sillas.add(b3);
+        sillas.add(b4);
+        sillas.add(b5);
+        sillas.add(b6);
+        sillas.add(b7);
+        sillas.add(b8);
+        sillas.add(b9);
+        sillas.add(b10);
+        sillas.add(c1);
+        sillas.add(c2);
+        sillas.add(c3);
+        sillas.add(c4);
+        sillas.add(c5);
+        sillas.add(c6);
+        sillas.add(c7);
+        sillas.add(c8);
+        sillas.add(c9);
+        sillas.add(c10);
+        sillas.add(d1);
+        sillas.add(d2);
+        sillas.add(d3);
+        sillas.add(d4);
+        sillas.add(d5);
+        sillas.add(d6);
+        sillas.add(d7);
+        sillas.add(d8);
+        sillas.add(d9);
+        sillas.add(d10);
+        sillas.add(e1);
+        sillas.add(e2);
+        sillas.add(e3);
+        sillas.add(e4);
+        sillas.add(e5);
+        sillas.add(e6);
+        sillas.add(e7);
+        sillas.add(e8);
+        sillas.add(e9);
+        sillas.add(e10);
+        sillas.add(f1);
+        sillas.add(f2);
+        sillas.add(f3);
+        sillas.add(f4);
+        sillas.add(f5);
+        sillas.add(f6);
+        sillas.add(f7);
+        sillas.add(f8);
+        sillas.add(f9);
+        sillas.add(f10);
+        sillas.add(g1);
+        sillas.add(g2);
+        sillas.add(g3);
+        sillas.add(g4);
+        sillas.add(g5);
+        sillas.add(g6);
+        sillas.add(g7);
+        sillas.add(g8);
+        sillas.add(g9);
+        sillas.add(g10);
+        LlenarSillas();
+        
     }
+    
+    ArrayList <Silla> sillas;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -105,36 +252,6 @@ public class Sala extends javax.swing.JFrame {
         G8 = new javax.swing.JLabel();
         G9 = new javax.swing.JLabel();
         G10 = new javax.swing.JLabel();
-        H1 = new javax.swing.JLabel();
-        H2 = new javax.swing.JLabel();
-        H3 = new javax.swing.JLabel();
-        H4 = new javax.swing.JLabel();
-        H5 = new javax.swing.JLabel();
-        H6 = new javax.swing.JLabel();
-        H7 = new javax.swing.JLabel();
-        H8 = new javax.swing.JLabel();
-        H9 = new javax.swing.JLabel();
-        H10 = new javax.swing.JLabel();
-        I1 = new javax.swing.JLabel();
-        I2 = new javax.swing.JLabel();
-        I3 = new javax.swing.JLabel();
-        I4 = new javax.swing.JLabel();
-        I5 = new javax.swing.JLabel();
-        I6 = new javax.swing.JLabel();
-        I7 = new javax.swing.JLabel();
-        I8 = new javax.swing.JLabel();
-        I9 = new javax.swing.JLabel();
-        I10 = new javax.swing.JLabel();
-        J1 = new javax.swing.JLabel();
-        J2 = new javax.swing.JLabel();
-        J3 = new javax.swing.JLabel();
-        J4 = new javax.swing.JLabel();
-        J5 = new javax.swing.JLabel();
-        J6 = new javax.swing.JLabel();
-        J7 = new javax.swing.JLabel();
-        J8 = new javax.swing.JLabel();
-        J9 = new javax.swing.JLabel();
-        J10 = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
         topbar = new javax.swing.JLabel();
         save = new javax.swing.JLabel();
@@ -145,6 +262,7 @@ public class Sala extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         title.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
@@ -158,304 +276,214 @@ public class Sala extends javax.swing.JFrame {
                 A1MouseClicked(evt);
             }
         });
-        jPanel1.add(A1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 30, -1));
+        jPanel1.add(A1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 30, -1));
 
         A2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(A2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 30, -1));
+        jPanel1.add(A2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 30, -1));
 
         A3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(A3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 30, -1));
+        jPanel1.add(A3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 30, -1));
 
         A4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(A4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 30, -1));
+        jPanel1.add(A4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 30, -1));
 
         A5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(A5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 30, -1));
+        jPanel1.add(A5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 30, -1));
 
         A6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(A6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 30, -1));
+        jPanel1.add(A6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 30, -1));
 
         A7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(A7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 30, -1));
+        jPanel1.add(A7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 30, -1));
 
         A8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(A8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 30, -1));
+        jPanel1.add(A8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 30, -1));
 
         A9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(A9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 30, -1));
+        jPanel1.add(A9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, 30, -1));
 
         A10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(A10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 30, -1));
+        jPanel1.add(A10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 30, -1));
 
         B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(B1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 30, -1));
+        jPanel1.add(B1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 30, -1));
 
         B2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(B2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 30, -1));
+        jPanel1.add(B2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 30, -1));
 
         B3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(B3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 30, -1));
+        jPanel1.add(B3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 30, -1));
 
         B4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(B4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 30, -1));
+        jPanel1.add(B4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 30, -1));
 
         B5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(B5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 30, -1));
+        jPanel1.add(B5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 30, -1));
 
         B6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(B6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 30, -1));
+        jPanel1.add(B6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, 30, -1));
 
         B7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(B7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 30, -1));
+        jPanel1.add(B7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 30, -1));
 
         B8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(B8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, 30, -1));
+        jPanel1.add(B8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 30, -1));
 
         B9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(B9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 30, -1));
+        jPanel1.add(B9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 30, -1));
 
         B10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(B10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 30, -1));
+        jPanel1.add(B10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 30, -1));
 
         C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 30, -1));
+        jPanel1.add(C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 30, -1));
 
         C2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 30, -1));
+        jPanel1.add(C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 30, -1));
 
         C3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 30, -1));
+        jPanel1.add(C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 30, -1));
 
         C4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 30, -1));
+        jPanel1.add(C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 30, -1));
 
         C5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 30, -1));
+        jPanel1.add(C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 30, -1));
 
         C6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 30, -1));
+        jPanel1.add(C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 30, -1));
 
         C7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(C7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, 30, -1));
+        jPanel1.add(C7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 30, -1));
 
         C8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(C8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 30, -1));
+        jPanel1.add(C8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 30, -1));
 
         C9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(C9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, 30, -1));
+        jPanel1.add(C9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 30, -1));
 
         C10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(C10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, 30, -1));
+        jPanel1.add(C10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 30, -1));
 
         D1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(D1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 30, -1));
+        jPanel1.add(D1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 30, -1));
 
         D2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(D2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 30, -1));
+        jPanel1.add(D2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 30, -1));
 
         D3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(D3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 30, -1));
+        jPanel1.add(D3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 30, -1));
 
         D4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(D4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, 30, -1));
+        jPanel1.add(D4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 30, -1));
 
         D5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(D5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 30, -1));
+        jPanel1.add(D5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 30, -1));
 
         D6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(D6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 30, -1));
+        jPanel1.add(D6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 30, -1));
 
         D7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(D7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 30, -1));
+        jPanel1.add(D7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 30, -1));
 
         D8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(D8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 30, -1));
+        jPanel1.add(D8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 30, -1));
 
         D9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(D9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, 30, -1));
+        jPanel1.add(D9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 30, -1));
 
         D10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(D10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, 30, -1));
+        jPanel1.add(D10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, 30, -1));
 
         E1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 30, -1));
+        jPanel1.add(E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 30, -1));
 
         E2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(E2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 30, -1));
+        jPanel1.add(E2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 30, -1));
 
         E3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 30, -1));
+        jPanel1.add(E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 30, -1));
 
         E4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(E4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 30, -1));
+        jPanel1.add(E4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 30, -1));
 
         E5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(E5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 30, -1));
+        jPanel1.add(E5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 30, -1));
 
         E6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(E6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 210, 30, -1));
+        jPanel1.add(E6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 30, -1));
 
         E7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(E7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 30, -1));
+        jPanel1.add(E7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 30, -1));
 
         E8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(E8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, 30, -1));
+        jPanel1.add(E8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 30, -1));
 
         E9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(E9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 30, -1));
+        jPanel1.add(E9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 30, -1));
 
         E10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(E10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 210, 30, -1));
+        jPanel1.add(E10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 30, -1));
 
         F1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(F1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 30, -1));
+        jPanel1.add(F1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 30, -1));
 
         F2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(F2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 30, -1));
+        jPanel1.add(F2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 30, -1));
 
         F3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(F3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 30, -1));
+        jPanel1.add(F3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 30, -1));
 
         F4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(F4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 30, -1));
+        jPanel1.add(F4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 30, -1));
 
         F5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(F5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 30, -1));
+        jPanel1.add(F5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 30, -1));
 
         F6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(F6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 30, -1));
+        jPanel1.add(F6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 30, -1));
 
         F7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(F7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 30, -1));
+        jPanel1.add(F7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, 30, -1));
 
         F8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(F8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 30, -1));
+        jPanel1.add(F8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 30, -1));
 
         F9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(F9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 30, -1));
+        jPanel1.add(F9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 30, -1));
 
         F10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(F10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 30, -1));
+        jPanel1.add(F10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 30, -1));
 
         G1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 30, -1));
+        jPanel1.add(G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 30, -1));
 
         G2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(G2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 30, -1));
+        jPanel1.add(G2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 30, -1));
 
         G3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(G3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 30, -1));
+        jPanel1.add(G3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 30, -1));
 
         G4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(G4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 30, -1));
+        jPanel1.add(G4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 30, -1));
 
         G5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(G5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 30, -1));
+        jPanel1.add(G5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 30, -1));
 
         G6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(G6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 30, -1));
+        jPanel1.add(G6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 30, -1));
 
         G7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(G7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 30, -1));
+        jPanel1.add(G7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 30, -1));
 
         G8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(G8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 30, -1));
+        jPanel1.add(G8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 30, -1));
 
         G9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(G9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 270, 30, -1));
+        jPanel1.add(G9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 30, -1));
 
         G10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(G10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 30, -1));
-
-        H1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(H1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 30, -1));
-
-        H2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(H2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 30, -1));
-
-        H3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(H3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 30, -1));
-
-        H4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(H4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 30, -1));
-
-        H5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(H5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 30, -1));
-
-        H6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(H6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 30, -1));
-
-        H7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(H7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, 30, -1));
-
-        H8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(H8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 30, -1));
-
-        H9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(H9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 300, 30, -1));
-
-        H10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(H10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 300, 30, -1));
-
-        I1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(I1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 30, -1));
-
-        I2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(I2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 30, -1));
-
-        I3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(I3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 30, -1));
-
-        I4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(I4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 30, -1));
-
-        I5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(I5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 30, -1));
-
-        I6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(I6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 30, -1));
-
-        I7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(I7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 30, -1));
-
-        I8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(I8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 330, 30, -1));
-
-        I9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(I9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, 30, -1));
-
-        I10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(I10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, 30, -1));
-
-        J1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(J1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, 30, -1));
-
-        J2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(J2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 30, -1));
-
-        J3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(J3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 30, -1));
-
-        J4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(J4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 360, 30, -1));
-
-        J5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(J5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, 30, -1));
-
-        J6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(J6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 30, -1));
-
-        J7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(J7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 30, -1));
-
-        J8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(J8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 30, -1));
-
-        J9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(J9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 360, 30, -1));
-
-        J10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
-        jPanel1.add(J10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 30, -1));
+        jPanel1.add(G10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 30, -1));
 
         close.setBackground(new java.awt.Color(255, 255, 255));
         close.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -472,7 +500,7 @@ public class Sala extends javax.swing.JFrame {
                 closeMouseExited(evt);
             }
         });
-        jPanel1.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 0, 40, 40));
+        jPanel1.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 40, 40));
 
         topbar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         topbar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -490,29 +518,25 @@ public class Sala extends javax.swing.JFrame {
         save.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         save.setText("Guardar");
         save.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 440, 70, 30));
+        jPanel1.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, 70, 30));
 
         pantalla.setBackground(new java.awt.Color(153, 153, 153));
         pantalla.setOpaque(true);
-        jPanel1.add(pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, 430, 10));
+        jPanel1.add(pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, 430, 10));
 
         jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 0, 11)); // NOI18N
         jLabel1.setText("Pantalla");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 460, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 779, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 642, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE)
         );
 
         pack();
@@ -556,6 +580,16 @@ public class Sala extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_A1MouseClicked
 
+    void LlenarSillas(){
+        for (Silla x : sillas) {
+            if (x.state==true) {
+                x.posicion.setIcon(new ImageIcon("src/imagenes/disponible.png"));
+            }else{
+                x.posicion.setIcon(new ImageIcon("src/imagenes/reservado.png"));
+            }
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -662,36 +696,6 @@ public class Sala extends javax.swing.JFrame {
     private javax.swing.JLabel G7;
     private javax.swing.JLabel G8;
     private javax.swing.JLabel G9;
-    private javax.swing.JLabel H1;
-    private javax.swing.JLabel H10;
-    private javax.swing.JLabel H2;
-    private javax.swing.JLabel H3;
-    private javax.swing.JLabel H4;
-    private javax.swing.JLabel H5;
-    private javax.swing.JLabel H6;
-    private javax.swing.JLabel H7;
-    private javax.swing.JLabel H8;
-    private javax.swing.JLabel H9;
-    private javax.swing.JLabel I1;
-    private javax.swing.JLabel I10;
-    private javax.swing.JLabel I2;
-    private javax.swing.JLabel I3;
-    private javax.swing.JLabel I4;
-    private javax.swing.JLabel I5;
-    private javax.swing.JLabel I6;
-    private javax.swing.JLabel I7;
-    private javax.swing.JLabel I8;
-    private javax.swing.JLabel I9;
-    private javax.swing.JLabel J1;
-    private javax.swing.JLabel J10;
-    private javax.swing.JLabel J2;
-    private javax.swing.JLabel J3;
-    private javax.swing.JLabel J4;
-    private javax.swing.JLabel J5;
-    private javax.swing.JLabel J6;
-    private javax.swing.JLabel J7;
-    private javax.swing.JLabel J8;
-    private javax.swing.JLabel J9;
     private javax.swing.JLabel close;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

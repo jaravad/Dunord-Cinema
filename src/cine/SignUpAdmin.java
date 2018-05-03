@@ -26,9 +26,11 @@ public class SignUpAdmin extends javax.swing.JFrame {
         AWTUtilities.setWindowOpaque(this, false);
         setLocationRelativeTo(null);
         error.setVisible(false);
+        error1.setVisible(false);
         error2.setVisible(false);
         error3.setVisible(false);
         error4.setVisible(false);
+        error5.setVisible(false);
     }
 
     /**
@@ -65,6 +67,11 @@ public class SignUpAdmin extends javax.swing.JFrame {
         error3 = new javax.swing.JLabel();
         crearcuenta = new javax.swing.JLabel();
         error4 = new javax.swing.JLabel();
+        document = new javax.swing.JLabel();
+        docsep = new javax.swing.JSeparator();
+        error1 = new javax.swing.JLabel();
+        error5 = new javax.swing.JLabel();
+        doctxt = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -207,7 +214,7 @@ public class SignUpAdmin extends javax.swing.JFrame {
         passw.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
         passw.setForeground(new java.awt.Color(204, 204, 204));
         passw.setText("Escriba una contraseña:");
-        background.add(passw, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
+        background.add(passw, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, -1));
 
         txtpassw.setFont(new java.awt.Font("Microsoft JhengHei", 0, 11)); // NOI18N
         txtpassw.setBorder(null);
@@ -224,16 +231,16 @@ public class SignUpAdmin extends javax.swing.JFrame {
                 txtpasswKeyTyped(evt);
             }
         });
-        background.add(txtpassw, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, 180, 20));
+        background.add(txtpassw, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 180, 20));
 
         passwsep.setBackground(new java.awt.Color(204, 204, 204));
         passwsep.setForeground(new java.awt.Color(255, 255, 255));
-        background.add(passwsep, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 180, 10));
+        background.add(passwsep, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 180, 10));
 
         confirm.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
         confirm.setForeground(new java.awt.Color(204, 204, 204));
         confirm.setText("Confirme la contraseña:");
-        background.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
+        background.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, -1, -1));
 
         confirmtxt.setFont(new java.awt.Font("Microsoft JhengHei", 0, 11)); // NOI18N
         confirmtxt.setBorder(null);
@@ -245,11 +252,11 @@ public class SignUpAdmin extends javax.swing.JFrame {
                 confirmtxtFocusLost(evt);
             }
         });
-        background.add(confirmtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 180, 20));
+        background.add(confirmtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, 180, 20));
 
         confirmsep.setBackground(new java.awt.Color(204, 204, 204));
         confirmsep.setForeground(new java.awt.Color(255, 255, 255));
-        background.add(confirmsep, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, 180, 10));
+        background.add(confirmsep, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 180, 10));
 
         telsep.setBackground(new java.awt.Color(204, 204, 204));
         telsep.setForeground(new java.awt.Color(255, 255, 255));
@@ -262,7 +269,7 @@ public class SignUpAdmin extends javax.swing.JFrame {
         error3.setFont(new java.awt.Font("Microsoft JhengHei", 0, 11)); // NOI18N
         error3.setForeground(new java.awt.Color(255, 0, 0));
         error3.setText("Contraseña muy corta (6 caracteres min.)");
-        background.add(error3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
+        background.add(error3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, -1, -1));
 
         crearcuenta.setBackground(new java.awt.Color(255, 255, 255));
         crearcuenta.setFont(new java.awt.Font("Segoe UI Semibold", 1, 13)); // NOI18N
@@ -282,12 +289,48 @@ public class SignUpAdmin extends javax.swing.JFrame {
                 crearcuentaMouseExited(evt);
             }
         });
-        background.add(crearcuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, 100, 30));
+        background.add(crearcuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 100, 30));
 
         error4.setFont(new java.awt.Font("Microsoft JhengHei", 0, 11)); // NOI18N
         error4.setForeground(new java.awt.Color(255, 0, 0));
         error4.setText("Usuario no disponible");
         background.add(error4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+
+        document.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 13)); // NOI18N
+        document.setForeground(new java.awt.Color(204, 204, 204));
+        document.setText("Documento");
+        background.add(document, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
+
+        docsep.setBackground(new java.awt.Color(204, 204, 204));
+        docsep.setForeground(new java.awt.Color(255, 255, 255));
+        background.add(docsep, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 180, 10));
+
+        error1.setFont(new java.awt.Font("Microsoft JhengHei", 0, 11)); // NOI18N
+        error1.setForeground(new java.awt.Color(255, 0, 0));
+        error1.setText("Solo se permiten numeros en este campo");
+        background.add(error1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, -1, -1));
+
+        error5.setFont(new java.awt.Font("Microsoft JhengHei", 0, 11)); // NOI18N
+        error5.setForeground(new java.awt.Color(255, 0, 0));
+        error5.setText("Limite alcanzado");
+        background.add(error5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, -1, -1));
+
+        doctxt.setFont(new java.awt.Font("Microsoft JhengHei", 0, 11)); // NOI18N
+        doctxt.setBorder(null);
+        doctxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                doctxtFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                doctxtFocusLost(evt);
+            }
+        });
+        doctxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                doctxtKeyTyped(evt);
+            }
+        });
+        background.add(doctxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 180, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -297,7 +340,7 @@ public class SignUpAdmin extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
         );
 
         pack();
@@ -455,13 +498,15 @@ public class SignUpAdmin extends javax.swing.JFrame {
                             Object telefono = teltxt.getText();
                             Object usuario = usertxt.getText();
                             Object password = txtpassw.getText();
-                            bw.write(name + "," + telefono + "," + usuario + "," + password);
+                            Object document = doctxt.getText();
+                            bw.write(name + "," + telefono + "," + document + "," + usuario + "," + password);
                             bw.newLine();
                             nametxt.setText("");
                             teltxt.setText("");
                             txtpassw.setText("");
                             confirmtxt.setText("");
                             usertxt.setText("");
+                            doctxt.setText("");
                             JOptionPane.showMessageDialog(null, "Cuenta de Admministrador creada satisfactoriamente", "Hi", JOptionPane.INFORMATION_MESSAGE);
                             nametxt.grabFocus();
                         } catch (Exception e) {
@@ -488,6 +533,36 @@ public class SignUpAdmin extends javax.swing.JFrame {
         crearcuenta.setBackground(new Color(255, 255, 255));
         crearcuenta.setForeground(new Color(102, 102, 255));
     }//GEN-LAST:event_crearcuentaMouseExited
+
+    private void doctxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_doctxtFocusGained
+        docsep.setBackground(new Color(102, 102, 255));
+        document.setForeground(new Color(102, 102, 255));
+    }//GEN-LAST:event_doctxtFocusGained
+
+    private void doctxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_doctxtFocusLost
+        docsep.setBackground(new Color(204, 204, 204));
+        document.setForeground(new Color(204, 204, 204));
+    }//GEN-LAST:event_doctxtFocusLost
+
+    private void doctxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_doctxtKeyTyped
+        char c = evt.getKeyChar();
+        if (c < '0' || c > '9') {
+            getToolkit().beep();
+            evt.consume();
+            error1.setVisible(true);
+            docsep.setBackground(new Color(255, 0, 0));
+        } else {
+            docsep.setBackground(new Color(204, 204, 204));
+            error1.setVisible(false);
+        }
+        if (doctxt.getText().length() > 12) {
+            error5.setVisible(true);
+            getToolkit().beep();
+            evt.consume();
+        } else {
+            error5.setVisible(false);
+        }
+    }//GEN-LAST:event_doctxtKeyTyped
 
     /**
      * @param args the command line arguments
@@ -531,10 +606,15 @@ public class SignUpAdmin extends javax.swing.JFrame {
     private javax.swing.JSeparator confirmsep;
     private javax.swing.JPasswordField confirmtxt;
     private javax.swing.JLabel crearcuenta;
+    private javax.swing.JSeparator docsep;
+    private javax.swing.JTextField doctxt;
+    private javax.swing.JLabel document;
     private javax.swing.JLabel error;
+    private javax.swing.JLabel error1;
     private javax.swing.JLabel error2;
     private javax.swing.JLabel error3;
     private javax.swing.JLabel error4;
+    private javax.swing.JLabel error5;
     private javax.swing.JLabel name;
     private javax.swing.JSeparator namesep;
     private javax.swing.JTextField nametxt;

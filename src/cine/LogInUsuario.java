@@ -262,11 +262,11 @@ public class LogInUsuario extends javax.swing.JFrame {
                 while (s.hasNextLine()) {
                     String linea = s.nextLine();
                     String[] campo = linea.split(",");
-                    if (usuario.equals(campo[2]) && password.equals(campo[3])) {
+                    if (usuario.equals(campo[3]) && password.equals(campo[4])) {
                         sw = true;
                         sw2 = true;
                         break;
-                    } else if (usuario.equals(campo[2]) && !password.equals(campo[3])) {
+                    } else if (usuario.equals(campo[3]) && !password.equals(campo[4])) {
                         sw = true;
                         sw2 = false;
                         break;
