@@ -1,0 +1,2 @@
+Avengers: Infinity War,02:00,12,src/imagenes/portadas/avengers-infinity-war-imax.jpg
+Deadpool 2,02:30,18,src/imagenes/portadas/Deadpool---.jpg
