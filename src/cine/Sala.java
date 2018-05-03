@@ -283,10 +283,10 @@ public class Sala extends javax.swing.JFrame {
         G9 = new javax.swing.JLabel();
         G10 = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
+        volver = new javax.swing.JLabel();
         topbar = new javax.swing.JLabel();
         save = new javax.swing.JLabel();
         pantalla = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -297,7 +297,7 @@ public class Sala extends javax.swing.JFrame {
 
         title.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         title.setText("Reserva de Asientos");
-        jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 180, 26));
+        jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 180, 26));
 
         A1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         A1.setName("A1"); // NOI18N
@@ -697,6 +697,24 @@ public class Sala extends javax.swing.JFrame {
         });
         jPanel1.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 40, 40));
 
+        volver.setBackground(new java.awt.Color(255, 255, 255));
+        volver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        volver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Back Arrow_28px.png"))); // NOI18N
+        volver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        volver.setOpaque(true);
+        volver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                volverMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                volverMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                volverMouseExited(evt);
+            }
+        });
+        jPanel1.add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
+
         topbar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         topbar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -708,7 +726,7 @@ public class Sala extends javax.swing.JFrame {
                 topbarMousePressed(evt);
             }
         });
-        jPanel1.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 40));
+        jPanel1.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 40));
 
         save.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         save.setText("Guardar");
@@ -724,15 +742,11 @@ public class Sala extends javax.swing.JFrame {
         pantalla.setOpaque(true);
         jPanel1.add(pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, 430, 10));
 
-        jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 0, 11)); // NOI18N
-        jLabel1.setText("Pantalla");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 642, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -873,6 +887,21 @@ public class Sala extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_saveMouseClicked
 
+    private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
+        
+        HorariosSala h=new HorariosSala();
+        this.setVisible(false);
+        h.setVisible(true);
+    }//GEN-LAST:event_volverMouseClicked
+
+    private void volverMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseEntered
+        volver.setBackground(new Color(231, 231, 231));
+    }//GEN-LAST:event_volverMouseEntered
+
+    private void volverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseExited
+        volver.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_volverMouseExited
+
     void DobleClick(java.awt.event.MouseEvent evt, JLabel lbl) {
         if (evt.getClickCount() == 2) {
             for (Silla x : sillas) {
@@ -1008,11 +1037,11 @@ public class Sala extends javax.swing.JFrame {
     private javax.swing.JLabel G8;
     private javax.swing.JLabel G9;
     private javax.swing.JLabel close;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel pantalla;
     private javax.swing.JLabel save;
     private javax.swing.JLabel title;
     private javax.swing.JLabel topbar;
+    private javax.swing.JLabel volver;
     // End of variables declaration//GEN-END:variables
 }
