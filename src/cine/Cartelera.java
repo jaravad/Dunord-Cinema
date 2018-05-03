@@ -233,11 +233,13 @@ public class Cartelera extends javax.swing.JFrame {
     }//GEN-LAST:event_sala2MouseClicked
 
     private void sala2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sala2MouseEntered
-        // TODO add your handling code here:
+        sala2.setBackground(new Color(240,240,240));
+        sala2.setForeground(new Color(0,0,0));
     }//GEN-LAST:event_sala2MouseEntered
 
     private void sala2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sala2MouseExited
-        // TODO add your handling code here:
+        sala2.setBackground(new Color(255,255,255));
+        sala2.setForeground(new Color(153,153,153));
     }//GEN-LAST:event_sala2MouseExited
 
     /**

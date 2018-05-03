@@ -78,6 +78,8 @@ public class HorariosSala extends javax.swing.JFrame {
         table.setBackground(Color.WHITE);
 
     }
+    
+    public static String globalcode;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -118,6 +120,11 @@ public class HorariosSala extends javax.swing.JFrame {
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableMouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(table);
@@ -240,6 +247,17 @@ public class HorariosSala extends javax.swing.JFrame {
         volver.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_volverMouseExited
 
+    private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
+        if (evt.getClickCount() == 2) {
+            DefaultTableModel model = (DefaultTableModel) table.getModel();
+            globalcode=String.valueOf(model.getValueAt(table.getSelectedRow(),4));
+            System.out.println(globalcode);
+            Sala s=new Sala();
+            s.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_tableMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -251,7 +269,7 @@ public class HorariosSala extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

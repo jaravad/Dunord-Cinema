@@ -463,7 +463,7 @@ public class AddFunciones extends javax.swing.JFrame {
                 SubNodo q = p.linksubNodo;
                 boolean sw = false;
                 while (q != null && sw == false) {
-                    
+
                     String[] campos1 = q.fechain.split(" ");
                     String[] campos3 = q.fechafin.split(" ");
                     if (campos1[1].equalsIgnoreCase(String.valueOf(mescomb.getSelectedItem()))) {
@@ -597,6 +597,14 @@ public class AddFunciones extends javax.swing.JFrame {
                 try (java.io.BufferedWriter bw = new java.io.BufferedWriter(new FileWriter(archivo, true));) {
                     bw.write(q.pelicula + "," + q.fechain + "," + q.fechafin + "," + q.formato + "," + String.valueOf(q.code));
                     bw.newLine();
+                    File f = new File("Sillas/" + String.valueOf(q.code) + ".txt");
+                    try {
+                        BufferedWriter bw3 = new BufferedWriter(new FileWriter(f));
+                        bw3.write("");
+                        bw3.close();
+                    } catch (Exception ex2) {
+                        System.out.println(ex2.toString());
+                    }
 
                 } catch (Exception e) {
                     System.out.println(e.toString());
@@ -607,16 +615,16 @@ public class AddFunciones extends javax.swing.JFrame {
             p = p.link;
         }
 
-        
+
     }//GEN-LAST:event_guardarMouseClicked
 
     private void guardarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarMouseEntered
         guardar.setForeground(Color.WHITE);
-        guardar.setBackground(new Color(255,153,0));
+        guardar.setBackground(new Color(255, 153, 0));
     }//GEN-LAST:event_guardarMouseEntered
 
     private void guardarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarMouseExited
-        guardar.setForeground(new Color(255,153,0));
+        guardar.setForeground(new Color(255, 153, 0));
         guardar.setBackground(Color.WHITE);
     }//GEN-LAST:event_guardarMouseExited
 
@@ -663,7 +671,7 @@ public class AddFunciones extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
