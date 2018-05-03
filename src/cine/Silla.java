@@ -12,11 +12,11 @@ import javax.swing.JLabel;
  * @author Jesus David
  */
 public class Silla {
-    
-    public Silla(JLabel posi,boolean stat){
-        posicion=posi;
-        state=stat;
-        
+
+    public Silla(JLabel posi, boolean stat) {
+        posicion = posi;
+        state = stat;
+
     }
     JLabel posicion;
     boolean state;

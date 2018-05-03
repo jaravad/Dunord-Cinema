@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -482,202 +483,452 @@ public class Sala extends javax.swing.JFrame {
 
         C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         C1.setName("C1"); // NOI18N
+        C1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C1MouseClicked(evt);
+            }
+        });
         jPanel1.add(C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 30, -1));
 
         C2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         C2.setName("C2"); // NOI18N
+        C2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C2MouseClicked(evt);
+            }
+        });
         jPanel1.add(C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 30, -1));
 
         C3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         C3.setName("C3"); // NOI18N
+        C3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C3MouseClicked(evt);
+            }
+        });
         jPanel1.add(C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 30, -1));
 
         C4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         C4.setName("C4"); // NOI18N
+        C4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C4MouseClicked(evt);
+            }
+        });
         jPanel1.add(C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 30, -1));
 
         C5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         C5.setName("C5"); // NOI18N
+        C5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C5MouseClicked(evt);
+            }
+        });
         jPanel1.add(C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 30, -1));
 
         C6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         C6.setName("C6"); // NOI18N
+        C6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C6MouseClicked(evt);
+            }
+        });
         jPanel1.add(C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 30, -1));
 
         C7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         C7.setName("C7"); // NOI18N
+        C7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C7MouseClicked(evt);
+            }
+        });
         jPanel1.add(C7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 30, -1));
 
         C8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         C8.setName("C8"); // NOI18N
+        C8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C8MouseClicked(evt);
+            }
+        });
         jPanel1.add(C8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 30, -1));
 
         C9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         C9.setName("C9"); // NOI18N
+        C9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C9MouseClicked(evt);
+            }
+        });
         jPanel1.add(C9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 30, -1));
 
         C10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         C10.setName("C10"); // NOI18N
+        C10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C10MouseClicked(evt);
+            }
+        });
         jPanel1.add(C10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 30, -1));
 
         D1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         D1.setName("D1"); // NOI18N
+        D1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                D1MouseClicked(evt);
+            }
+        });
         jPanel1.add(D1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 30, -1));
 
         D2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         D2.setName("D2"); // NOI18N
+        D2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                D2MouseClicked(evt);
+            }
+        });
         jPanel1.add(D2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 30, -1));
 
         D3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         D3.setName("D3"); // NOI18N
+        D3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                D3MouseClicked(evt);
+            }
+        });
         jPanel1.add(D3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 30, -1));
 
         D4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         D4.setName("D4"); // NOI18N
+        D4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                D4MouseClicked(evt);
+            }
+        });
         jPanel1.add(D4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 30, -1));
 
         D5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         D5.setName("D5"); // NOI18N
+        D5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                D5MouseClicked(evt);
+            }
+        });
         jPanel1.add(D5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 30, -1));
 
         D6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         D6.setName("D6"); // NOI18N
+        D6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                D6MouseClicked(evt);
+            }
+        });
         jPanel1.add(D6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 30, -1));
 
         D7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         D7.setName("D7"); // NOI18N
+        D7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                D7MouseClicked(evt);
+            }
+        });
         jPanel1.add(D7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 30, -1));
 
         D8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         D8.setName("D8"); // NOI18N
+        D8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                D8MouseClicked(evt);
+            }
+        });
         jPanel1.add(D8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 30, -1));
 
         D9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         D9.setName("D9"); // NOI18N
+        D9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                D9MouseClicked(evt);
+            }
+        });
         jPanel1.add(D9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 30, -1));
 
         D10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         D10.setName("D10"); // NOI18N
+        D10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                D10MouseClicked(evt);
+            }
+        });
         jPanel1.add(D10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, 30, -1));
 
         E1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         E1.setName("E1"); // NOI18N
+        E1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                E1MouseClicked(evt);
+            }
+        });
         jPanel1.add(E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 30, -1));
 
         E2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         E2.setName("E2"); // NOI18N
+        E2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                E2MouseClicked(evt);
+            }
+        });
         jPanel1.add(E2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 30, -1));
 
         E3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         E3.setName("E3"); // NOI18N
+        E3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                E3MouseClicked(evt);
+            }
+        });
         jPanel1.add(E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 30, -1));
 
         E4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         E4.setName("E4"); // NOI18N
+        E4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                E4MouseClicked(evt);
+            }
+        });
         jPanel1.add(E4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 30, -1));
 
         E5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         E5.setName("E5"); // NOI18N
+        E5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                E5MouseClicked(evt);
+            }
+        });
         jPanel1.add(E5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 30, -1));
 
         E6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         E6.setName("E6"); // NOI18N
+        E6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                E6MouseClicked(evt);
+            }
+        });
         jPanel1.add(E6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 30, -1));
 
         E7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         E7.setName("E7"); // NOI18N
+        E7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                E7MouseClicked(evt);
+            }
+        });
         jPanel1.add(E7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 30, -1));
 
         E8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         E8.setName("E8"); // NOI18N
+        E8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                E8MouseClicked(evt);
+            }
+        });
         jPanel1.add(E8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 30, -1));
 
         E9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         E9.setName("E9"); // NOI18N
+        E9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                E9MouseClicked(evt);
+            }
+        });
         jPanel1.add(E9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 30, -1));
 
         E10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         E10.setName("E10"); // NOI18N
+        E10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                E10MouseClicked(evt);
+            }
+        });
         jPanel1.add(E10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 30, -1));
 
         F1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         F1.setName("F1"); // NOI18N
+        F1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                F1MouseClicked(evt);
+            }
+        });
         jPanel1.add(F1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 30, -1));
 
         F2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         F2.setName("F2"); // NOI18N
+        F2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                F2MouseClicked(evt);
+            }
+        });
         jPanel1.add(F2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 30, -1));
 
         F3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         F3.setName("F3"); // NOI18N
+        F3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                F3MouseClicked(evt);
+            }
+        });
         jPanel1.add(F3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 30, -1));
 
         F4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         F4.setName("F4"); // NOI18N
+        F4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                F4MouseClicked(evt);
+            }
+        });
         jPanel1.add(F4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 30, -1));
 
         F5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         F5.setName("F5"); // NOI18N
+        F5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                F5MouseClicked(evt);
+            }
+        });
         jPanel1.add(F5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 30, -1));
 
         F6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         F6.setName("F6"); // NOI18N
+        F6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                F6MouseClicked(evt);
+            }
+        });
         jPanel1.add(F6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 30, -1));
 
         F7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         F7.setName("F7"); // NOI18N
+        F7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                F7MouseClicked(evt);
+            }
+        });
         jPanel1.add(F7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, 30, -1));
 
         F8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         F8.setName("F8"); // NOI18N
+        F8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                F8MouseClicked(evt);
+            }
+        });
         jPanel1.add(F8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 30, -1));
 
         F9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         F9.setName("F9"); // NOI18N
+        F9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                F9MouseClicked(evt);
+            }
+        });
         jPanel1.add(F9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 30, -1));
 
         F10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         F10.setName("F10"); // NOI18N
+        F10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                F10MouseClicked(evt);
+            }
+        });
         jPanel1.add(F10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 30, -1));
 
         G1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         G1.setName("G1"); // NOI18N
+        G1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                G1MouseClicked(evt);
+            }
+        });
         jPanel1.add(G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 30, -1));
 
         G2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         G2.setName("G2"); // NOI18N
+        G2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                G2MouseClicked(evt);
+            }
+        });
         jPanel1.add(G2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 30, -1));
 
         G3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         G3.setName("G3"); // NOI18N
+        G3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                G3MouseClicked(evt);
+            }
+        });
         jPanel1.add(G3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 30, -1));
 
         G4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         G4.setName("G4"); // NOI18N
+        G4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                G4MouseClicked(evt);
+            }
+        });
         jPanel1.add(G4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 30, -1));
 
         G5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         G5.setName("G5"); // NOI18N
+        G5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                G5MouseClicked(evt);
+            }
+        });
         jPanel1.add(G5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 30, -1));
 
         G6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         G6.setName("G6"); // NOI18N
+        G6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                G6MouseClicked(evt);
+            }
+        });
         jPanel1.add(G6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 30, -1));
 
         G7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         G7.setName("G7"); // NOI18N
+        G7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                G7MouseClicked(evt);
+            }
+        });
         jPanel1.add(G7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 30, -1));
 
         G8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         G8.setName("G8"); // NOI18N
+        G8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                G8MouseClicked(evt);
+            }
+        });
         jPanel1.add(G8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 30, -1));
 
         G9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         G9.setName("G9"); // NOI18N
+        G9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                G9MouseClicked(evt);
+            }
+        });
         jPanel1.add(G9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 30, -1));
 
         G10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         G10.setName("G10"); // NOI18N
+        G10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                G10MouseClicked(evt);
+            }
+        });
         jPanel1.add(G10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 30, -1));
 
         close.setBackground(new java.awt.Color(255, 255, 255));
@@ -870,12 +1121,13 @@ public class Sala extends javax.swing.JFrame {
             BufferedWriter bw2 = new BufferedWriter(new FileWriter(f));
             bw2.write("");
             bw2.close();
+            
         } catch (Exception e) {
             System.out.println("Mensaje: " + e.toString());
         }
 
         for (Silla x : sillas) {
-            System.out.println(x.posicion.getName());
+           
             try (java.io.BufferedWriter bw = new java.io.BufferedWriter(new FileWriter(f, true));) {
                 bw.write(x.posicion.getName() + "," + String.valueOf(x.state));
                 bw.newLine();
@@ -885,6 +1137,7 @@ public class Sala extends javax.swing.JFrame {
             }
 
         }
+        JOptionPane.showMessageDialog(null, "Cambios guardados satisfactoriamente", "Aviso", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_saveMouseClicked
 
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
@@ -902,6 +1155,207 @@ public class Sala extends javax.swing.JFrame {
         volver.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_volverMouseExited
 
+    private void C1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C1MouseClicked
+      DobleClick(evt, C1);
+    }//GEN-LAST:event_C1MouseClicked
+
+    private void C3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C3MouseClicked
+        DobleClick(evt, C3);
+    }//GEN-LAST:event_C3MouseClicked
+
+    private void C4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C4MouseClicked
+       DobleClick(evt, C4);
+    }//GEN-LAST:event_C4MouseClicked
+
+    private void C5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C5MouseClicked
+        DobleClick(evt, C5);
+    }//GEN-LAST:event_C5MouseClicked
+
+    private void C6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C6MouseClicked
+        DobleClick(evt, C6);
+    }//GEN-LAST:event_C6MouseClicked
+
+    private void C7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C7MouseClicked
+        DobleClick(evt, C7);
+    }//GEN-LAST:event_C7MouseClicked
+
+    private void C8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C8MouseClicked
+       DobleClick(evt, C8);
+    }//GEN-LAST:event_C8MouseClicked
+
+    private void C9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C9MouseClicked
+        DobleClick(evt, C9);
+    }//GEN-LAST:event_C9MouseClicked
+
+    private void C10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C10MouseClicked
+       DobleClick(evt, C10);
+    }//GEN-LAST:event_C10MouseClicked
+
+    private void D1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D1MouseClicked
+       DobleClick(evt, D1);
+    }//GEN-LAST:event_D1MouseClicked
+
+    private void D2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D2MouseClicked
+        DobleClick(evt, D2);
+    }//GEN-LAST:event_D2MouseClicked
+
+    private void D3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D3MouseClicked
+       DobleClick(evt, D3);
+    }//GEN-LAST:event_D3MouseClicked
+
+    private void D4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D4MouseClicked
+      DobleClick(evt, D4);
+    }//GEN-LAST:event_D4MouseClicked
+
+    private void D5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D5MouseClicked
+       DobleClick(evt, D5);
+    }//GEN-LAST:event_D5MouseClicked
+
+    private void D6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D6MouseClicked
+       DobleClick(evt, D6);
+    }//GEN-LAST:event_D6MouseClicked
+
+    private void D7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D7MouseClicked
+       DobleClick(evt, D7);
+    }//GEN-LAST:event_D7MouseClicked
+
+    private void D8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D8MouseClicked
+        DobleClick(evt, D8);
+    }//GEN-LAST:event_D8MouseClicked
+
+    private void D9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D9MouseClicked
+       DobleClick(evt, D9);
+    }//GEN-LAST:event_D9MouseClicked
+
+    private void D10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D10MouseClicked
+       DobleClick(evt, D10);
+    }//GEN-LAST:event_D10MouseClicked
+
+    private void E1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E1MouseClicked
+       DobleClick(evt, E1);
+    }//GEN-LAST:event_E1MouseClicked
+
+    private void E2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E2MouseClicked
+       DobleClick(evt, E2);
+    }//GEN-LAST:event_E2MouseClicked
+
+    private void E3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E3MouseClicked
+       
+        DobleClick(evt, E3);
+    }//GEN-LAST:event_E3MouseClicked
+
+    private void E4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E4MouseClicked
+       DobleClick(evt, E4);
+    }//GEN-LAST:event_E4MouseClicked
+
+    private void E5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E5MouseClicked
+        DobleClick(evt, E5);
+    }//GEN-LAST:event_E5MouseClicked
+
+    private void E6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E6MouseClicked
+        DobleClick(evt, E6);
+    }//GEN-LAST:event_E6MouseClicked
+
+    private void E7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E7MouseClicked
+       DobleClick(evt, E7);
+    }//GEN-LAST:event_E7MouseClicked
+
+    private void E8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E8MouseClicked
+        DobleClick(evt, E8);
+    }//GEN-LAST:event_E8MouseClicked
+
+    private void E9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E9MouseClicked
+        DobleClick(evt, E9);
+    }//GEN-LAST:event_E9MouseClicked
+
+    private void E10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E10MouseClicked
+        DobleClick(evt, E10);
+    }//GEN-LAST:event_E10MouseClicked
+
+    private void F1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F1MouseClicked
+        DobleClick(evt, F1);
+    }//GEN-LAST:event_F1MouseClicked
+
+    private void F2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F2MouseClicked
+       DobleClick(evt, F2);
+    }//GEN-LAST:event_F2MouseClicked
+
+    private void F3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F3MouseClicked
+       DobleClick(evt, F3);
+    }//GEN-LAST:event_F3MouseClicked
+
+    private void F4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F4MouseClicked
+        DobleClick(evt, F4);
+    }//GEN-LAST:event_F4MouseClicked
+
+    private void F5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F5MouseClicked
+       DobleClick(evt, F5);
+    }//GEN-LAST:event_F5MouseClicked
+
+    private void F6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F6MouseClicked
+       DobleClick(evt, F6);
+    }//GEN-LAST:event_F6MouseClicked
+
+    private void F7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F7MouseClicked
+       DobleClick(evt, F7);
+    }//GEN-LAST:event_F7MouseClicked
+
+    private void F8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F8MouseClicked
+       DobleClick(evt, F8);
+    }//GEN-LAST:event_F8MouseClicked
+
+    private void F9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F9MouseClicked
+       DobleClick(evt, F9);
+    }//GEN-LAST:event_F9MouseClicked
+
+    private void F10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F10MouseClicked
+       DobleClick(evt, F10);
+    }//GEN-LAST:event_F10MouseClicked
+
+    private void G1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G1MouseClicked
+        DobleClick(evt, G1);
+    }//GEN-LAST:event_G1MouseClicked
+
+    private void G2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G2MouseClicked
+       DobleClick(evt, G2);
+    }//GEN-LAST:event_G2MouseClicked
+
+    private void G3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G3MouseClicked
+       DobleClick(evt, G3);
+    }//GEN-LAST:event_G3MouseClicked
+
+    private void G4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G4MouseClicked
+       DobleClick(evt, G4);
+    }//GEN-LAST:event_G4MouseClicked
+
+    private void G5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G5MouseClicked
+      DobleClick(evt, G5);
+    }//GEN-LAST:event_G5MouseClicked
+
+    private void G6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G6MouseClicked
+  DobleClick(evt, G6);
+    }//GEN-LAST:event_G6MouseClicked
+
+    private void G7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G7MouseClicked
+       DobleClick(evt, G7);
+    }//GEN-LAST:event_G7MouseClicked
+
+    private void G8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G8MouseClicked
+       DobleClick(evt, G8);
+    }//GEN-LAST:event_G8MouseClicked
+
+    private void G9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G9MouseClicked
+        DobleClick(evt, G9);
+    }//GEN-LAST:event_G9MouseClicked
+
+    private void G10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G10MouseClicked
+       DobleClick(evt, G10);
+    }//GEN-LAST:event_G10MouseClicked
+
+    private void C2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C2MouseClicked
+       DobleClick(evt, C2);
+    }//GEN-LAST:event_C2MouseClicked
+
     void DobleClick(java.awt.event.MouseEvent evt, JLabel lbl) {
         if (evt.getClickCount() == 2) {
             for (Silla x : sillas) {
@@ -914,7 +1368,7 @@ public class Sala extends javax.swing.JFrame {
                         x.state = true;
                         lbl.setIcon(new ImageIcon("src/imagenes/disponible.png"));
                     }
-                    System.out.println(x.state);
+                    
                 }
             }
         }

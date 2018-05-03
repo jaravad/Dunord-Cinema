@@ -140,7 +140,7 @@ public class HorariosSala extends javax.swing.JFrame {
             table.getColumnModel().getColumn(4).setPreferredWidth(30);
         }
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 730, 380));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 930, 380));
 
         title.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 150, 26));
@@ -178,7 +178,7 @@ public class HorariosSala extends javax.swing.JFrame {
                 closeMouseExited(evt);
             }
         });
-        jPanel1.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 0, 40, 40));
+        jPanel1.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 0, 40, 40));
 
         topbar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         topbar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -191,15 +191,13 @@ public class HorariosSala extends javax.swing.JFrame {
                 topbarMousePressed(evt);
             }
         });
-        jPanel1.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 40));
+        jPanel1.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 808, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 982, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -251,7 +249,6 @@ public class HorariosSala extends javax.swing.JFrame {
         if (evt.getClickCount() == 2) {
             DefaultTableModel model = (DefaultTableModel) table.getModel();
             globalcode=String.valueOf(model.getValueAt(table.getSelectedRow(),4));
-            System.out.println(globalcode);
             Sala s=new Sala();
             s.setVisible(true);
             this.setVisible(false);

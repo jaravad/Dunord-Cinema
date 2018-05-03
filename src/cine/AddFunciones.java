@@ -432,142 +432,169 @@ public class AddFunciones extends javax.swing.JFrame {
     }//GEN-LAST:event_closeMouseExited
 
     private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
+        boolean sw12 = true;
+        boolean dospuntos = horain.getText().contains(":");
+        String[] hora = horain.getText().split(":");
+        try {
+            int hora1 = Integer.parseInt(hora[0]);
+            int hora2 = Integer.parseInt(hora[1]);
 
-        Date date = new Date();
-        String campos[] = horain.getText().split(":");
-        date.setYear(2018 - 1900);
-        date.setHours(Integer.parseInt(campos[0]));
-        date.setMinutes(Integer.parseInt(campos[1]));
-        date.setMonth(mescomb.getSelectedIndex() - 1);
-        date.setSeconds(00);
-        date.setDate(Integer.parseInt(String.valueOf(dayspinner.getValue())));
-        SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE MMMM d HH:mm yyyy");
-        Date datefin = new Date();
-        datefin.setYear(2018 - 1900);
-        String campos2[] = FileHandle.getField(String.valueOf(peliculacombo.getSelectedItem()), 1).split(":");
-        datefin.setHours(date.getHours() + Integer.parseInt(campos2[0]));
-        datefin.setMinutes(Integer.parseInt(campos[1]) + Integer.parseInt(campos2[1]));
-        datefin.setMonth(mescomb.getSelectedIndex() - 1);
-        datefin.setSeconds(00);
-        datefin.setDate(date.getDate());
-        DefaultListModel model = (DefaultListModel) list.getModel();
-        if (model.isEmpty()) {
-            Random rnd = new Random();
-            int id = (int) (rnd.nextDouble() * 899999 + 100000);
-            ptr = agregarSubLista(ptr, "Sala" + salacombo.getSelectedItem(), String.valueOf(peliculacombo.getSelectedItem()), String.valueOf(dateFormat.format(date)), String.valueOf(dateFormat.format(datefin)), String.valueOf(formatcmb.getSelectedItem()), id);
-            MostrarMultiLista(list, ptr);
-        } else {
-            if (salacombo.getSelectedItem().equals("1")) {
-                Nodo p = ptr;
-
-                SubNodo q = p.linksubNodo;
-                boolean sw = false;
-                while (q != null && sw == false) {
-
-                    String[] campos1 = q.fechain.split(" ");
-                    String[] campos3 = q.fechafin.split(" ");
-                    if (campos1[1].equalsIgnoreCase(String.valueOf(mescomb.getSelectedItem()))) {
-                        if (campos1[2].equals(String.valueOf(dayspinner.getValue()))) {
-                            String[] horaini = campos1[3].split(":");
-                            String[] horafina = campos3[3].split(":");
-                            int horain2 = Integer.parseInt(horaini[0]);
-                            int minin = Integer.parseInt(horaini[1]);
-                            int horafin = Integer.parseInt(horafina[0]);
-                            int minfin = Integer.parseInt(horafina[1]);
-                            String dura = FileHandle.getField(String.valueOf(peliculacombo.getSelectedItem()), 1);
-                            String[] horaIngre = horain.getText().split(":");
-                            String[] horadura = dura.split(":");
-                            int horaIngresa = Integer.parseInt(horaIngre[0]);
-                            int minIngresa = Integer.parseInt(horaIngre[1]);
-                            int horaIngrefinal = horaIngresa + Integer.parseInt(horadura[0]);
-                            int minIngrefinal = minIngresa + Integer.parseInt(horadura[1]);
-                            if (horain2 == horaIngresa) {
-                                sw = true;
-                            } else {
-                                if (horain2 < horaIngresa && horaIngresa < horafin) {
-                                    sw = true;
-                                } else {
-                                    if (horafin == horaIngresa) {
-                                        if (minfin > minIngrefinal) {
-                                            sw = true;
-                                        }
-                                    }
-                                }
-                            }
-
-                        }
-
-                    }
-                    q = q.link2;
-                }
-
-                if (sw == false) {
-                    Random rnd = new Random();
-                    int id = (int) (rnd.nextDouble() * 899999 + 100000);
-                    ptr = agregarSubLista(ptr, "Sala" + salacombo.getSelectedItem(), String.valueOf(peliculacombo.getSelectedItem()), String.valueOf(dateFormat.format(date)), String.valueOf(dateFormat.format(datefin)), String.valueOf(formatcmb.getSelectedItem()), id);
-                    MostrarMultiLista(list, ptr);
-                } else {
-                    JOptionPane.showMessageDialog(null, "Fecha erronea", "Error", JOptionPane.QUESTION_MESSAGE);
-                }
-                System.out.println("");
-            } else {
-                Nodo p;
-                p = ptr.link;
-
-                SubNodo q = p.linksubNodo;
-                boolean sw = false;
-                while (q != null && sw == false) {
-                    String[] campos1 = q.fechain.split(" ");
-                    String[] campos3 = q.fechafin.split(" ");
-                    if (campos1[1].equalsIgnoreCase(String.valueOf(mescomb.getSelectedItem()))) {
-
-                        if (campos1[2].equals(String.valueOf(dayspinner.getValue()))) {
-
-                            String[] horaini = campos1[3].split(":");
-                            String[] horafina = campos3[3].split(":");
-                            int horain2 = Integer.parseInt(horaini[0]);
-                            int minin = Integer.parseInt(horaini[1]);
-                            int horafin = Integer.parseInt(horafina[0]);
-                            int minfin = Integer.parseInt(horafina[1]);
-                            String dura = FileHandle.getField(String.valueOf(peliculacombo.getSelectedItem()), 1);
-                            String[] horaIngre = horain.getText().split(":");
-                            String[] horadura = dura.split(":");
-                            int horaIngresa = Integer.parseInt(horaIngre[0]);
-                            int minIngresa = Integer.parseInt(horaIngre[1]);
-                            int horaIngrefinal = horaIngresa + Integer.parseInt(horadura[0]);
-                            int minIngrefinal = minIngresa + Integer.parseInt(horadura[1]);
-                            if (horain2 == horaIngresa) {
-                                sw = true;
-                            } else {
-                                if (horain2 < horaIngresa && horaIngresa < horafin) {
-                                    sw = true;
-                                } else {
-                                    if (horafin == horaIngresa) {
-                                        if (minfin > minIngrefinal) {
-                                            sw = true;
-                                        }
-                                    }
-                                }
-                            }
-
-                        }
-
-                    }
-                    q = q.link2;
-                }
-
-                if (sw == false) {
-                    Random rnd = new Random();
-                    int id = (int) (rnd.nextDouble() * 899999 + 100000);
-                    ptr = agregarSubLista(ptr, "Sala" + salacombo.getSelectedItem(), String.valueOf(peliculacombo.getSelectedItem()), String.valueOf(dateFormat.format(date)), String.valueOf(dateFormat.format(datefin)), String.valueOf(formatcmb.getSelectedItem()), id);
-                    MostrarMultiLista(list, ptr);
-                } else {
-                    JOptionPane.showMessageDialog(null, "Fecha erronea", "Error", JOptionPane.QUESTION_MESSAGE);
-                }
-                System.out.println("");
-            }
+        } catch (Exception e) {
+            sw12 = false;
         }
+        if (mescomb.getSelectedIndex() != 0 && sw12 == true && dospuntos == true) {
 
+            Date date = new Date();
+            String campos[] = horain.getText().split(":");
+            date.setYear(2018 - 1900);
+            date.setHours(Integer.parseInt(campos[0]));
+            date.setMinutes(Integer.parseInt(campos[1]));
+            date.setMonth(mescomb.getSelectedIndex() - 1);
+            date.setSeconds(00);
+            date.setDate(Integer.parseInt(String.valueOf(dayspinner.getValue())));
+            SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE MMMM d HH:mm yyyy");
+            Date datefin = new Date();
+            datefin.setYear(2018 - 1900);
+            String campos2[] = FileHandle.getField(String.valueOf(peliculacombo.getSelectedItem()), 1).split(":");
+            datefin.setHours(date.getHours() + Integer.parseInt(campos2[0]));
+            datefin.setMinutes(Integer.parseInt(campos[1]) + Integer.parseInt(campos2[1]));
+            datefin.setMonth(mescomb.getSelectedIndex() - 1);
+            datefin.setSeconds(00);
+            datefin.setDate(date.getDate());
+            DefaultListModel model = (DefaultListModel) list.getModel();
+            if (model.isEmpty()) {
+                Random rnd = new Random();
+                int id = (int) (rnd.nextDouble() * 899999 + 100000);
+                ptr = agregarSubLista(ptr, "Sala" + salacombo.getSelectedItem(), String.valueOf(peliculacombo.getSelectedItem()), String.valueOf(dateFormat.format(date)), String.valueOf(dateFormat.format(datefin)), String.valueOf(formatcmb.getSelectedItem()), id);
+                MostrarMultiLista(list, ptr);
+            } else {
+                if (salacombo.getSelectedItem().equals("1")) {
+                    Nodo p = ptr;
+
+                    SubNodo q = p.linksubNodo;
+                    boolean sw = false;
+                    while (q != null && sw == false) {
+
+                        String[] campos1 = q.fechain.split(" ");
+                        String[] campos3 = q.fechafin.split(" ");
+                        if (campos1[1].equalsIgnoreCase(String.valueOf(mescomb.getSelectedItem()))) {
+                            if (campos1[2].equals(String.valueOf(dayspinner.getValue()))) {
+                                String[] horaini = campos1[3].split(":");
+                                String[] horafina = campos3[3].split(":");
+                                int horain2 = Integer.parseInt(horaini[0]);
+                                int minin = Integer.parseInt(horaini[1]);
+                                int horafin = Integer.parseInt(horafina[0]);
+                                int minfin = Integer.parseInt(horafina[1]);
+                                String dura = FileHandle.getField(String.valueOf(peliculacombo.getSelectedItem()), 1);
+                                String[] horaIngre = horain.getText().split(":");
+                                String[] horadura = dura.split(":");
+                                int horaIngresa = Integer.parseInt(horaIngre[0]);
+                                int minIngresa = Integer.parseInt(horaIngre[1]);
+                                int horaIngrefinal = horaIngresa + Integer.parseInt(horadura[0]);
+                                int minIngrefinal = minIngresa + Integer.parseInt(horadura[1]);
+                                if (horain2 == horaIngresa) {
+                                    sw = true;
+                                } else {
+                                    if (horain2 < horaIngresa && horaIngresa < horafin) {
+                                        sw = true;
+                                    } else {
+                                        if (horafin == horaIngresa) {
+                                            if (minfin > minIngrefinal) {
+                                                sw = true;
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+                        q = q.link2;
+                    }
+
+                    if (sw == false) {
+                        Random rnd = new Random();
+                        int id = (int) (rnd.nextDouble() * 899999 + 100000);
+                        ptr = agregarSubLista(ptr, "Sala" + salacombo.getSelectedItem(), String.valueOf(peliculacombo.getSelectedItem()), String.valueOf(dateFormat.format(date)), String.valueOf(dateFormat.format(datefin)), String.valueOf(formatcmb.getSelectedItem()), id);
+                        MostrarMultiLista(list, ptr);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Fecha erronea", "Error", JOptionPane.QUESTION_MESSAGE);
+                    }
+                    System.out.println("");
+                } else {
+                    Nodo p;
+                    p = ptr.link;
+
+                    SubNodo q = p.linksubNodo;
+                    boolean sw = false;
+                    while (q != null && sw == false) {
+                        String[] campos1 = q.fechain.split(" ");
+                        String[] campos3 = q.fechafin.split(" ");
+                        if (campos1[1].equalsIgnoreCase(String.valueOf(mescomb.getSelectedItem()))) {
+
+                            if (campos1[2].equals(String.valueOf(dayspinner.getValue()))) {
+
+                                String[] horaini = campos1[3].split(":");
+                                String[] horafina = campos3[3].split(":");
+                                int horain2 = Integer.parseInt(horaini[0]);
+                                int minin = Integer.parseInt(horaini[1]);
+                                int horafin = Integer.parseInt(horafina[0]);
+                                int minfin = Integer.parseInt(horafina[1]);
+                                String dura = FileHandle.getField(String.valueOf(peliculacombo.getSelectedItem()), 1);
+                                String[] horaIngre = horain.getText().split(":");
+                                String[] horadura = dura.split(":");
+                                int horaIngresa = Integer.parseInt(horaIngre[0]);
+                                int minIngresa = Integer.parseInt(horaIngre[1]);
+                                int horaIngrefinal = horaIngresa + Integer.parseInt(horadura[0]);
+                                int minIngrefinal = minIngresa + Integer.parseInt(horadura[1]);
+                                if (horain2 == horaIngresa) {
+                                    sw = true;
+                                } else {
+                                    if (horain2 < horaIngresa && horaIngresa < horafin) {
+                                        sw = true;
+                                    } else {
+                                        if (horafin == horaIngresa) {
+                                            if (minfin > minIngrefinal) {
+                                                sw = true;
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+                        q = q.link2;
+                    }
+
+                    if (sw == false) {
+                        Random rnd = new Random();
+                        int id = (int) (rnd.nextDouble() * 899999 + 100000);
+                        ptr = agregarSubLista(ptr, "Sala" + salacombo.getSelectedItem(), String.valueOf(peliculacombo.getSelectedItem()), String.valueOf(dateFormat.format(date)), String.valueOf(dateFormat.format(datefin)), String.valueOf(formatcmb.getSelectedItem()), id);
+                        MostrarMultiLista(list, ptr);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Fecha erronea", "Error", JOptionPane.QUESTION_MESSAGE);
+                    }
+                    System.out.println("");
+                }
+            }
+        } else {
+            if (mescomb.getSelectedIndex() == 0 ) {
+                JOptionPane.showMessageDialog(null, "Seleccione un mes", "ERROR", JOptionPane.ERROR_MESSAGE);
+            }
+            if (sw12 == false && dospuntos == false) {
+                JOptionPane.showMessageDialog(null, "Formato de hora invalido", "ERROR", JOptionPane.ERROR_MESSAGE);
+            } else {
+                if (sw12 == false) {
+                    JOptionPane.showMessageDialog(null, "Ingrese solo numeros en el campo hora", "ERROR", JOptionPane.ERROR_MESSAGE);
+
+                } else if (dospuntos == false) {
+                    JOptionPane.showMessageDialog(null, "Formato de hora debe contener : entre hora y minutos", "ERROR", JOptionPane.ERROR_MESSAGE);
+
+                }
+            }
+
+        }
 
     }//GEN-LAST:event_addMouseClicked
 
