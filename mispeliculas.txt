@@ -1,2 +1,4 @@
 Avengers: Infinity War,02:00,12,src/imagenes/portadas/avengers-infinity-war-imax.jpg
 Deadpool 2,02:30,18,src/imagenes/portadas/Deadpool---.jpg
+Todo Por Una Visa,02:00,15,src/imagenes/portadas/TodoVisa.jpg
+Rampage: Devastacion,02:30,12,src/imagenes/portadas/Rampage.jpg

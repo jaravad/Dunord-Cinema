@@ -8,8 +8,8 @@ package cine;
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.util.ArrayList;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  *
@@ -24,77 +24,77 @@ public class Sala extends javax.swing.JFrame {
         initComponents();
         AWTUtilities.setWindowOpaque(this, false);
         setLocationRelativeTo(null);
-        sillas=new ArrayList<Silla>();
-        Silla a1=new Silla(A1,true);
-        Silla a2=new Silla(A2,true);
-        Silla a3=new Silla(A3,true);
-        Silla a4=new Silla(A4,true);
-        Silla a5=new Silla(A5,true);
-        Silla a6=new Silla(A6,true);
-        Silla a7=new Silla(A7,true);
-        Silla a8=new Silla(A8,true);
-        Silla a9=new Silla(A9,true);
-        Silla a10=new Silla(A10,true);
-        Silla b1=new Silla(B1,true);
-        Silla b2=new Silla(B2,true);
-        Silla b3=new Silla(B3,true);
-        Silla b4=new Silla(B4,true);
-        Silla b5=new Silla(B5,true);
-        Silla b6=new Silla(B6,false);
-        Silla b7=new Silla(B7,true);
-        Silla b8=new Silla(B8,true);
-        Silla b9=new Silla(B9,true);
-        Silla b10=new Silla(B10,true);
-        Silla c1=new Silla(C1,true);
-        Silla c2=new Silla(C2,true);
-        Silla c3=new Silla(C3,true);
-        Silla c4=new Silla(C4,true);
-        Silla c5=new Silla(C5,true);
-        Silla c6=new Silla(C6,false);
-        Silla c7=new Silla(C7,true);
-        Silla c8=new Silla(C8,true);
-        Silla c9=new Silla(C9,true);
-        Silla c10=new Silla(C10,true);
-        Silla d1=new Silla(D1,true);
-        Silla d2=new Silla(D2,true);
-        Silla d3=new Silla(D3,true);
-        Silla d4=new Silla(D4,true);
-        Silla d5=new Silla(D5,true);
-        Silla d6=new Silla(D6,true);
-        Silla d7=new Silla(D7,true);
-        Silla d8=new Silla(D8,true);
-        Silla d9=new Silla(D9,true);
-        Silla d10=new Silla(D10,true);
-        Silla e1=new Silla(E1,true);
-        Silla e2=new Silla(E2,true);
-        Silla e3=new Silla(E3,true);
-        Silla e4=new Silla(E4,false);
-        Silla e5=new Silla(E5,true);
-        Silla e6=new Silla(E6,true);
-        Silla e7=new Silla(E7,true);
-        Silla e8=new Silla(E8,true);
-        Silla e9=new Silla(E9,true);
-        Silla e10=new Silla(E10,true);
-        Silla f1=new Silla(F1,false);
-        Silla f2=new Silla(F2,true);
-        Silla f3=new Silla(F3,true);
-        Silla f4=new Silla(F4,false);
-        Silla f5=new Silla(F5,true);
-        Silla f6=new Silla(F6,true);
-        Silla f7=new Silla(F7,true);
-        Silla f8=new Silla(F8,true);
-        Silla f9=new Silla(F9,true);
-        Silla f10=new Silla(F10,true);
-        Silla g1=new Silla(G1,false);
-        Silla g2=new Silla(G2,false);
-        Silla g3=new Silla(G3,false);
-        Silla g4=new Silla(G4,false);
-        Silla g5=new Silla(G5,true);
-        Silla g6=new Silla(G6,true);
-        Silla g7=new Silla(G7,true);
-        Silla g8=new Silla(G8,true);
-        Silla g9=new Silla(G9,true);
-        Silla g10=new Silla(G10,true);
+        sillas = new ArrayList<Silla>();
+        Silla a1 = new Silla(A1, true);
+        Silla a2 = new Silla(A2, true);
+        Silla a3 = new Silla(A3, true);
+        Silla a4 = new Silla(A4, true);
+        Silla a5 = new Silla(A5, true);
+        Silla a6 = new Silla(A6, true);
+        Silla a7 = new Silla(A7, true);
+        Silla a8 = new Silla(A8, true);
+        Silla a9 = new Silla(A9, true);
+        Silla a10 = new Silla(A10, true);
+        Silla b1 = new Silla(B1, true);
+        Silla b2 = new Silla(B2, true);
+        Silla b3 = new Silla(B3, true);
+        Silla b4 = new Silla(B4, true);
+        Silla b5 = new Silla(B5, true);
+        Silla b6 = new Silla(B6, true);
+        Silla b7 = new Silla(B7, true);
+        Silla b8 = new Silla(B8, true);
+        Silla b9 = new Silla(B9, true);
+        Silla b10 = new Silla(B10, true);
+        Silla c1 = new Silla(C1, true);
+        Silla c2 = new Silla(C2, true);
+        Silla c3 = new Silla(C3, true);
+        Silla c4 = new Silla(C4, true);
+        Silla c5 = new Silla(C5, true);
+        Silla c6 = new Silla(C6, true);
+        Silla c7 = new Silla(C7, true);
+        Silla c8 = new Silla(C8, true);
+        Silla c9 = new Silla(C9, true);
+        Silla c10 = new Silla(C10, true);
+        Silla d1 = new Silla(D1, true);
+        Silla d2 = new Silla(D2, true);
+        Silla d3 = new Silla(D3, true);
+        Silla d4 = new Silla(D4, true);
+        Silla d5 = new Silla(D5, true);
+        Silla d6 = new Silla(D6, true);
+        Silla d7 = new Silla(D7, true);
+        Silla d8 = new Silla(D8, true);
+        Silla d9 = new Silla(D9, true);
+        Silla d10 = new Silla(D10, true);
+        Silla e1 = new Silla(E1, true);
+        Silla e2 = new Silla(E2, true);
+        Silla e3 = new Silla(E3, true);
+        Silla e4 = new Silla(E4, true);
+        Silla e5 = new Silla(E5, true);
+        Silla e6 = new Silla(E6, true);
+        Silla e7 = new Silla(E7, true);
+        Silla e8 = new Silla(E8, true);
+        Silla e9 = new Silla(E9, true);
+        Silla e10 = new Silla(E10, true);
+        Silla f1 = new Silla(F1, true);
+        Silla f2 = new Silla(F2, true);
+        Silla f3 = new Silla(F3, true);
+        Silla f4 = new Silla(F4, true);
+        Silla f5 = new Silla(F5, true);
+        Silla f6 = new Silla(F6, true);
+        Silla f7 = new Silla(F7, true);
+        Silla f8 = new Silla(F8, true);
+        Silla f9 = new Silla(F9, true);
+        Silla f10 = new Silla(F10, true);
+        Silla g1 = new Silla(G1, true);
+        Silla g2 = new Silla(G2, true);
+        Silla g3 = new Silla(G3, true);
+        Silla g4 = new Silla(G4, true);
+        Silla g5 = new Silla(G5, true);
+        Silla g6 = new Silla(G6, true);
+        Silla g7 = new Silla(G7, true);
+        Silla g8 = new Silla(G8, true);
+        Silla g9 = new Silla(G9, true);
+        Silla g10 = new Silla(G10, true);
         sillas.add(a1);
         sillas.add(a2);
         sillas.add(a3);
@@ -166,10 +166,10 @@ public class Sala extends javax.swing.JFrame {
         sillas.add(g9);
         sillas.add(g10);
         LlenarSillas();
-        
+
     }
-    
-    ArrayList <Silla> sillas;
+
+    ArrayList<Silla> sillas;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -279,60 +279,155 @@ public class Sala extends javax.swing.JFrame {
         jPanel1.add(A1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 30, -1));
 
         A2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        A2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A2MouseClicked(evt);
+            }
+        });
         jPanel1.add(A2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 30, -1));
 
         A3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        A3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A3MouseClicked(evt);
+            }
+        });
         jPanel1.add(A3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 30, -1));
 
         A4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        A4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A4MouseClicked(evt);
+            }
+        });
         jPanel1.add(A4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 30, -1));
 
         A5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        A5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A5MouseClicked(evt);
+            }
+        });
         jPanel1.add(A5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 30, -1));
 
         A6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        A6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A6MouseClicked(evt);
+            }
+        });
         jPanel1.add(A6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 30, -1));
 
         A7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        A7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A7MouseClicked(evt);
+            }
+        });
         jPanel1.add(A7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 110, 30, -1));
 
         A8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        A8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A8MouseClicked(evt);
+            }
+        });
         jPanel1.add(A8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 30, -1));
 
         A9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        A9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A9MouseClicked(evt);
+            }
+        });
         jPanel1.add(A9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, 30, -1));
 
         A10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        A10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A10MouseClicked(evt);
+            }
+        });
         jPanel1.add(A10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 30, -1));
 
         B1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        B1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B1MouseClicked(evt);
+            }
+        });
         jPanel1.add(B1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 30, -1));
 
         B2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        B2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B2MouseClicked(evt);
+            }
+        });
         jPanel1.add(B2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 30, -1));
 
         B3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        B3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B3MouseClicked(evt);
+            }
+        });
         jPanel1.add(B3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 30, -1));
 
         B4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        B4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B4MouseClicked(evt);
+            }
+        });
         jPanel1.add(B4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 30, -1));
 
         B5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        B5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B5MouseClicked(evt);
+            }
+        });
         jPanel1.add(B5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 30, -1));
 
         B6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        B6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B6MouseClicked(evt);
+            }
+        });
         jPanel1.add(B6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, 30, -1));
 
         B7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        B7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B7MouseClicked(evt);
+            }
+        });
         jPanel1.add(B7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 30, -1));
 
         B8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        B8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B8MouseClicked(evt);
+            }
+        });
         jPanel1.add(B8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 30, -1));
 
         B9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        B9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B9MouseClicked(evt);
+            }
+        });
         jPanel1.add(B9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 30, -1));
 
         B10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
+        B10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B10MouseClicked(evt);
+            }
+        });
         jPanel1.add(B10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 30, -1));
 
         C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
@@ -563,33 +658,131 @@ public class Sala extends javax.swing.JFrame {
 
     public static int x;
     public static int y;
-    
+
     private void topbarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_topbarMousePressed
         x = evt.getX();
         y = evt.getY();
     }//GEN-LAST:event_topbarMousePressed
 
     private void A1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A1MouseClicked
-        if (evt.getClickCount() == 2) {
-            ImageIcon i;
-            if (("src/imagenes/disponible.png").equals(A1.getIcon().toString())) {
-                A1.setIcon(new ImageIcon("src/imagenes/reservado.png")); 
-            }else{
-                A1.setIcon(new ImageIcon("src/imagenes/disponible.png")); 
-            }
-        }
+        DobleClick(evt, A1);
     }//GEN-LAST:event_A1MouseClicked
 
-    void LlenarSillas(){
+    private void A2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A2MouseClicked
+        DobleClick(evt, A2);
+    }//GEN-LAST:event_A2MouseClicked
+
+    private void A3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A3MouseClicked
+        DobleClick(evt, A3);
+    }//GEN-LAST:event_A3MouseClicked
+
+    private void A4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A4MouseClicked
+
+        DobleClick(evt, A4);
+    }//GEN-LAST:event_A4MouseClicked
+
+    private void A5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A5MouseClicked
+        DobleClick(evt,A5);
+    }//GEN-LAST:event_A5MouseClicked
+
+    private void A6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A6MouseClicked
+        DobleClick(evt,A6);;
+    }//GEN-LAST:event_A6MouseClicked
+
+    private void A9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A9MouseClicked
+        DobleClick(evt,A9);
+    }//GEN-LAST:event_A9MouseClicked
+
+    private void A8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A8MouseClicked
+        DobleClick(evt,A8);
+    }//GEN-LAST:event_A8MouseClicked
+
+    private void A7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A7MouseClicked
+       DobleClick(evt,A7);
+    }//GEN-LAST:event_A7MouseClicked
+
+    private void A10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A10MouseClicked
+        DobleClick(evt,A10);
+    }//GEN-LAST:event_A10MouseClicked
+
+    private void B1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B1MouseClicked
+        DobleClick(evt,B1);
+    }//GEN-LAST:event_B1MouseClicked
+
+    private void B2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B2MouseClicked
+        DobleClick(evt,B2);
+    }//GEN-LAST:event_B2MouseClicked
+
+    private void B3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B3MouseClicked
+        DobleClick(evt,B3);
+    }//GEN-LAST:event_B3MouseClicked
+
+    private void B4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B4MouseClicked
+        DobleClick(evt,B4);
+    }//GEN-LAST:event_B4MouseClicked
+
+    private void B5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B5MouseClicked
+        DobleClick(evt,B5);
+    }//GEN-LAST:event_B5MouseClicked
+
+    private void B6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B6MouseClicked
+        DobleClick(evt,B6);
+    }//GEN-LAST:event_B6MouseClicked
+
+    private void B7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B7MouseClicked
+        DobleClick(evt,B7);
+    }//GEN-LAST:event_B7MouseClicked
+
+    private void B8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B8MouseClicked
+        DobleClick(evt,B8);
+    }//GEN-LAST:event_B8MouseClicked
+
+    private void B9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B9MouseClicked
+        DobleClick(evt,B9);
+    }//GEN-LAST:event_B9MouseClicked
+
+    private void B10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B10MouseClicked
+        DobleClick(evt,B10);
+    }//GEN-LAST:event_B10MouseClicked
+
+    
+    
+    
+    void DobleClick(java.awt.event.MouseEvent evt, JLabel lbl) {
+        if (evt.getClickCount() == 2) {
+            for (Silla x : sillas) {
+                
+                if (x.posicion.equals(lbl)) {
+                    if (x.state==true) {
+                        x.state=false;
+                        lbl.setIcon(new ImageIcon("src/imagenes/red.png"));
+                    }else{
+                        x.state=true;
+                        lbl.setIcon(new ImageIcon("src/imagenes/disponible.png"));
+                    }
+                    System.out.println(x.state);
+                }
+            }
+//            if (("src/imagenes/disponible.png").equals(lbl.getIcon().toString())) {
+//                lbl.setIcon(new ImageIcon("src/imagenes/red.png"));
+//                
+//            } else {
+//                lbl.setIcon(new ImageIcon("src/imagenes/disponible.png"));
+//
+//            }
+        }
+    }
+
+    void LlenarSillas() {
         for (Silla x : sillas) {
-            if (x.state==true) {
+            if (x.state == true) {
                 x.posicion.setIcon(new ImageIcon("src/imagenes/disponible.png"));
-            }else{
-                x.posicion.setIcon(new ImageIcon("src/imagenes/reservado.png"));
+            } else {
+                x.posicion.setIcon(new ImageIcon("src/imagenes/red.png"));
             }
         }
     }
-    
+
     /**
      * @param args the command line arguments
      */
