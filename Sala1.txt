@@ -1,3 +1,4 @@
 Avengers: Infinity War,lunes marzo 5 09:00 2018,lunes marzo 5 11:00 2018,3D,584848
 Deadpool 2,martes enero 9 09:00 2018,martes enero 9 11:30 2018,3D,684903
 Avengers: Infinity War,lunes enero 1 16:00 2018,lunes enero 1 18:00 2018,2D,146640
+Deadpool 2,domingo abril 1 07:00 2018,domingo abril 1 09:30 2018,3D,735821

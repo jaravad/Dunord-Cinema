@@ -268,7 +268,7 @@ public class AddFunciones extends javax.swing.JFrame {
                 closeMouseExited(evt);
             }
         });
-        back.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 40, 40));
+        back.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 0, 40, 40));
 
         volver.setBackground(new java.awt.Color(255, 255, 255));
         volver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -299,7 +299,7 @@ public class AddFunciones extends javax.swing.JFrame {
                 topbarMousePressed(evt);
             }
         });
-        back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 40));
+        back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 40));
 
         Dia.setBackground(new java.awt.Color(255, 255, 255));
         Dia.setFont(new java.awt.Font("Microsoft YaHei", 0, 10)); // NOI18N
@@ -356,15 +356,13 @@ public class AddFunciones extends javax.swing.JFrame {
                 guardarMouseExited(evt);
             }
         });
-        back.add(guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 510, 70, 30));
+        back.add(guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 510, 70, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 672, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 672, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -444,8 +442,6 @@ public class AddFunciones extends javax.swing.JFrame {
         date.setSeconds(00);
         date.setDate(Integer.parseInt(String.valueOf(dayspinner.getValue())));
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE MMMM d HH:mm yyyy");
-        System.out.println(date.getDate());
-        System.out.println(dateFormat.format(date));
         Date datefin = new Date();
         datefin.setYear(2018 - 1900);
         String campos2[] = FileHandle.getField(String.valueOf(peliculacombo.getSelectedItem()), 1).split(":");
@@ -454,7 +450,6 @@ public class AddFunciones extends javax.swing.JFrame {
         datefin.setMonth(mescomb.getSelectedIndex() - 1);
         datefin.setSeconds(00);
         datefin.setDate(date.getDate());
-        System.out.println(dateFormat.format(datefin));
         DefaultListModel model = (DefaultListModel) list.getModel();
         if (model.isEmpty()) {
             Random rnd = new Random();
@@ -522,11 +517,9 @@ public class AddFunciones extends javax.swing.JFrame {
                 SubNodo q = p.linksubNodo;
                 boolean sw = false;
                 while (q != null && sw == false) {
-                    System.out.println("exd");
                     String[] campos1 = q.fechain.split(" ");
                     String[] campos3 = q.fechafin.split(" ");
                     if (campos1[1].equalsIgnoreCase(String.valueOf(mescomb.getSelectedItem()))) {
-                        System.out.print("xD");
 
                         if (campos1[2].equals(String.valueOf(dayspinner.getValue()))) {
 
