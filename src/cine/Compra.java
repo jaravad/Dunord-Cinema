@@ -161,8 +161,8 @@ public class Compra extends javax.swing.JFrame {
         title.setText("Compra de Boletos");
         back.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 180, 26));
 
-        price.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 14)); // NOI18N
-        back.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 120, 30));
+        price.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 16)); // NOI18N
+        back.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 120, 30));
 
         precio.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 12)); // NOI18N
         precio.setText("Total: ");

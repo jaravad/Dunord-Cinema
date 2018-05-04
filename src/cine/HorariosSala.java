@@ -33,12 +33,12 @@ public class HorariosSala extends javax.swing.JFrame {
             File archivo = new File("Sala1.txt");
             Scanner s = null;
             try {
-                
+
                 s = new Scanner(archivo);
                 while (s.hasNextLine()) {
                     String linea = s.nextLine();
                     String[] campos = linea.split(",");
-                    model.addRow(new Object[]{campos[0], campos[1], campos[2], campos [3],campos[4]});
+                    model.addRow(new Object[]{campos[0], campos[1], campos[2], campos[3], campos[4]});
                 }
             } catch (Exception ex) {
                 System.out.println("Mensaje: " + ex.toString());
@@ -56,12 +56,12 @@ public class HorariosSala extends javax.swing.JFrame {
             File archivo = new File("Sala2.txt");
             Scanner s = null;
             try {
-                
+
                 s = new Scanner(archivo);
                 while (s.hasNextLine()) {
                     String linea = s.nextLine();
                     String[] campos = linea.split(",");
-                    model.addRow(new Object[]{campos[0], campos[1], campos[2], campos [3],campos[4]});
+                    model.addRow(new Object[]{campos[0], campos[1], campos[2], campos[3], campos[4]});
                 }
             } catch (Exception ex) {
                 System.out.println("Mensaje: " + ex.toString());
@@ -78,13 +78,12 @@ public class HorariosSala extends javax.swing.JFrame {
         table.setBackground(Color.WHITE);
 
     }
-    
+
     public static String globalcode;
     public static String dia;
     public static String fechaini;
     public static String fechafin;
-    
-    
+    public static String name;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -253,14 +252,15 @@ public class HorariosSala extends javax.swing.JFrame {
     private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
         if (evt.getClickCount() == 2) {
             DefaultTableModel model = (DefaultTableModel) table.getModel();
-            globalcode=String.valueOf(model.getValueAt(table.getSelectedRow(),4));
-            fechaini=String.valueOf(model.getValueAt(table.getSelectedRow(),1));
-            fechafin=String.valueOf(model.getValueAt(table.getSelectedRow(),2));
-            System.out.println(fechaini+" "+fechafin);
-            String []campos=String.valueOf(model.getValueAt(table.getSelectedRow(), 1)).split(" ");
-            dia=campos[0];
-            System.out.println(dia);
-            Sala s=new Sala();
+            globalcode = String.valueOf(model.getValueAt(table.getSelectedRow(), 4));
+            fechaini = String.valueOf(model.getValueAt(table.getSelectedRow(), 1));
+            fechafin = String.valueOf(model.getValueAt(table.getSelectedRow(), 2));
+            name = String.valueOf(model.getValueAt(table.getSelectedRow(), 0));
+
+            String[] campos = String.valueOf(model.getValueAt(table.getSelectedRow(), 1)).split(" ");
+            dia = campos[0];
+
+            Sala s = new Sala();
             s.setVisible(true);
             this.setVisible(false);
         }

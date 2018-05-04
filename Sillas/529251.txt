@@ -18,8 +18,8 @@ B7,true
 B8,true
 B9,true
 B10,true
-C1,true
-C2,true
+C1,false
+C2,false
 C3,true
 C4,true
 C5,true
