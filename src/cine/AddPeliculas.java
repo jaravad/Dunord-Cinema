@@ -244,7 +244,7 @@ public class AddPeliculas extends javax.swing.JFrame {
     public static int y;
     private void closeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseClicked
         this.dispose();
-        System.exit(0);
+        
     }//GEN-LAST:event_closeMouseClicked
 
     private void closeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseEntered
@@ -299,6 +299,8 @@ public class AddPeliculas extends javax.swing.JFrame {
                     swf = false;
                     File file = new File("src/imagenes/portadas/" + fichero.getName());
                     Files.copy(fichero.toPath(), file.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                    ListaPeliculas l=new ListaPeliculas();
+                    
                     cover.setIcon(null);
                     clasicombo.setSelectedIndex(0);
                 } catch (Exception e) {
@@ -309,6 +311,7 @@ public class AddPeliculas extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "No deben haber campos vacios", "Error", JOptionPane.WARNING_MESSAGE);
         }
+        
     }//GEN-LAST:event_guardarMouseClicked
 
     File fichero;

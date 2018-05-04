@@ -40,7 +40,7 @@ D9,true
 D10,true
 E1,true
 E2,true
-E3,true
+E3,false
 E4,true
 E5,true
 E6,true
@@ -51,7 +51,7 @@ E10,true
 F1,true
 F2,true
 F3,true
-F4,true
+F4,false
 F5,true
 F6,true
 F7,true
@@ -62,7 +62,7 @@ G1,true
 G2,true
 G3,true
 G4,true
-G5,true
+G5,false
 G6,true
 G7,true
 G8,true

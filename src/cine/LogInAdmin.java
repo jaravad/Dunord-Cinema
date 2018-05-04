@@ -57,7 +57,7 @@ public class LogInAdmin extends javax.swing.JFrame {
         back.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         back.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        passwordfield.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 8)); // NOI18N
+        passwordfield.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 10)); // NOI18N
         passwordfield.setBorder(null);
         passwordfield.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -209,7 +209,7 @@ public class LogInAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordfieldFocusLost
 
     private void passwordfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordfieldActionPerformed
-
+        accederMouseClicked(null);
     }//GEN-LAST:event_passwordfieldActionPerformed
 
     private void accederMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accederMouseClicked

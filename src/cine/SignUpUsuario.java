@@ -253,6 +253,11 @@ public class SignUpUsuario extends javax.swing.JFrame {
                 confirmtxtFocusLost(evt);
             }
         });
+        confirmtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmtxtActionPerformed(evt);
+            }
+        });
         background.add(confirmtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, 180, 20));
 
         confirmsep.setBackground(new java.awt.Color(204, 204, 204));
@@ -568,6 +573,10 @@ public class SignUpUsuario extends javax.swing.JFrame {
             error5.setVisible(false);
         }
     }//GEN-LAST:event_doctxtKeyTyped
+
+    private void confirmtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmtxtActionPerformed
+        crearcuentaMouseClicked(null);
+    }//GEN-LAST:event_confirmtxtActionPerformed
 
     /**
      * @param args the command line arguments

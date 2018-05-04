@@ -68,6 +68,7 @@ public class User extends javax.swing.JFrame implements Runnable {
     private void initComponents() {
 
         back = new javax.swing.JPanel();
+        logout = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
         topbar = new javax.swing.JLabel();
         cartelera = new javax.swing.JLabel();
@@ -80,6 +81,15 @@ public class User extends javax.swing.JFrame implements Runnable {
         back.setBackground(new java.awt.Color(255, 255, 255));
         back.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         back.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        logout.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Logout Rounded Left_25px.png"))); // NOI18N
+        logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutMouseClicked(evt);
+            }
+        });
+        back.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         close.setBackground(new java.awt.Color(255, 255, 255));
         close.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -200,6 +210,12 @@ public class User extends javax.swing.JFrame implements Runnable {
         cartelera.setForeground(new Color(153,153,153));
     }//GEN-LAST:event_carteleraMouseExited
 
+    private void logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseClicked
+        LogInUsuario l=new LogInUsuario();
+        this.setVisible(false);
+        l.setVisible(true);
+    }//GEN-LAST:event_logoutMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -246,6 +262,7 @@ public class User extends javax.swing.JFrame implements Runnable {
     private javax.swing.JLabel close;
     private javax.swing.JLabel fecha;
     private javax.swing.JLabel hour;
+    private javax.swing.JLabel logout;
     private javax.swing.JLabel topbar;
     // End of variables declaration//GEN-END:variables
 }

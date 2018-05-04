@@ -168,27 +168,41 @@ public class AddEntrada extends javax.swing.JFrame {
         back.add(precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 110, 20));
 
         add.setBackground(new java.awt.Color(255, 255, 255));
-        add.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 11)); // NOI18N
+        add.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 1, 12)); // NOI18N
+        add.setForeground(new java.awt.Color(0, 153, 0));
         add.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add.setText("Agregar");
-        add.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 0)));
         add.setOpaque(true);
         add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                addMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                addMouseExited(evt);
+            }
         });
         back.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 60, 30));
 
         save.setBackground(new java.awt.Color(255, 255, 255));
-        save.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 11)); // NOI18N
+        save.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 1, 12)); // NOI18N
+        save.setForeground(new java.awt.Color(0, 153, 0));
         save.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         save.setText("Guardar");
-        save.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        save.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 0)));
         save.setOpaque(true);
         save.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 saveMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                saveMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                saveMouseExited(evt);
             }
         });
         back.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 70, 30));
@@ -302,6 +316,26 @@ public class AddEntrada extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_saveMouseClicked
+
+    private void saveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveMouseEntered
+        save.setBackground(new Color(0,153,0));
+        save.setForeground(Color.WHITE);
+    }//GEN-LAST:event_saveMouseEntered
+
+    private void addMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseEntered
+        add.setBackground(new Color(0,153,0));
+        add.setForeground(Color.WHITE);
+    }//GEN-LAST:event_addMouseEntered
+
+    private void addMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseExited
+        add.setBackground(Color.WHITE);
+        add.setForeground(new Color(0,153,0));
+    }//GEN-LAST:event_addMouseExited
+
+    private void saveMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveMouseExited
+       save.setBackground(Color.WHITE);
+        save.setForeground(new Color(0,153,0));
+    }//GEN-LAST:event_saveMouseExited
 
     /**
      * @param args the command line arguments

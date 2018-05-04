@@ -1184,7 +1184,7 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_saveMouseClicked
 
     public void save() {
-        System.out.println("jijij");
+    
 
         File f = new File("Sillas/" + HorariosSala.globalcode + ".txt");
         try {
@@ -1454,7 +1454,6 @@ public class Sala extends javax.swing.JFrame {
                 System.out.println("Mensaje 2: " + ex2.getMessage());
             }
         }
-        System.out.println(cont + "" + dinero);
         Compra.price.setText("$ "+String.valueOf(Sala.dinero));
     }//GEN-LAST:event_comprarMouseClicked
 

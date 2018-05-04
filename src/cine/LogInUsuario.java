@@ -140,7 +140,7 @@ public class LogInUsuario extends javax.swing.JFrame {
         separatorpassw.setForeground(new java.awt.Color(255, 255, 255));
         background.add(separatorpassw, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 210, -1));
 
-        passwordfield.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 8)); // NOI18N
+        passwordfield.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 10)); // NOI18N
         passwordfield.setBorder(null);
         passwordfield.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -267,7 +267,7 @@ public class LogInUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordfieldFocusLost
 
     private void passwordfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordfieldActionPerformed
-
+        accederMouseClicked(null);
     }//GEN-LAST:event_passwordfieldActionPerformed
 
     private void accederMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accederMouseClicked

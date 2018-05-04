@@ -2,3 +2,5 @@ Avengers: Infinity War,02:00,12,src/imagenes/portadas/avengers-infinity-war-imax
 Deadpool 2,02:30,18,src/imagenes/portadas/Deadpool---.jpg
 Todo Por Una Visa,02:00,15,src/imagenes/portadas/TodoVisa.jpg
 Rampage: Devastacion,02:30,12,src/imagenes/portadas/Rampage.jpg
+Black Panther,02:30,12,src/imagenes/portadas/black_panther.jpg
+La Peor Semana,02:30,7,src/imagenes/portadas/la_peor_semana_de_mi_vida.jpg
