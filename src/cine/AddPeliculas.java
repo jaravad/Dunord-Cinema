@@ -32,8 +32,6 @@ public class AddPeliculas extends javax.swing.JFrame {
         initComponents();
         AWTUtilities.setWindowOpaque(this, false);
         setLocationRelativeTo(null);
-        System.out.println(this.clasicombo.getItemCount());
-        System.out.println(this.clasicombo.getSelectedIndex());
     }
 
     /**
@@ -260,9 +258,8 @@ public class AddPeliculas extends javax.swing.JFrame {
     }//GEN-LAST:event_closeMouseExited
 
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
-        Admin u = new Admin();
+        
         this.setVisible(false);
-        u.setVisible(true);
     }//GEN-LAST:event_volverMouseClicked
 
     private void volverMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseEntered

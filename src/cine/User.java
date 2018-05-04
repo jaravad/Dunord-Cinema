@@ -37,6 +37,7 @@ public class User extends javax.swing.JFrame {
         back = new javax.swing.JPanel();
         close = new javax.swing.JLabel();
         topbar = new javax.swing.JLabel();
+        cartelera = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -73,6 +74,27 @@ public class User extends javax.swing.JFrame {
             }
         });
         back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, 0, 640, 40));
+
+        cartelera.setBackground(new java.awt.Color(255, 255, 255));
+        cartelera.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        cartelera.setForeground(new java.awt.Color(153, 153, 153));
+        cartelera.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cartelera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Clapperboard_85px.png"))); // NOI18N
+        cartelera.setText("  Cartelera");
+        cartelera.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        cartelera.setOpaque(true);
+        cartelera.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                carteleraMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                carteleraMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                carteleraMouseExited(evt);
+            }
+        });
+        back.add(cartelera, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 200, 100));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,6 +138,22 @@ public class User extends javax.swing.JFrame {
         close.setIcon(new ImageIcon("src/imagenes/Delete_25px.png"));
     }//GEN-LAST:event_closeMouseExited
 
+    private void carteleraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_carteleraMouseClicked
+        Cartelera c=new Cartelera();
+        this.setVisible(false);
+        c.setVisible(true);
+    }//GEN-LAST:event_carteleraMouseClicked
+
+    private void carteleraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_carteleraMouseEntered
+        cartelera.setBackground(new Color(240,240,240));
+        cartelera.setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_carteleraMouseEntered
+
+    private void carteleraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_carteleraMouseExited
+        cartelera.setBackground(new Color(255,255,255));
+        cartelera.setForeground(new Color(153,153,153));
+    }//GEN-LAST:event_carteleraMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -153,6 +191,7 @@ public class User extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel back;
+    private javax.swing.JLabel cartelera;
     private javax.swing.JLabel close;
     private javax.swing.JLabel topbar;
     // End of variables declaration//GEN-END:variables

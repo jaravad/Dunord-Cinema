@@ -7,7 +7,13 @@ package cine;
 
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.Scanner;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -22,6 +28,31 @@ public class AddEntrada extends javax.swing.JFrame {
         initComponents();
         AWTUtilities.setWindowOpaque(this, false);
         setLocationRelativeTo(null);
+        table.getTableHeader().setReorderingAllowed(false);
+        table.setRowHeight(30);
+        File f =new  File("precios.txt");
+        DefaultTableModel model= (DefaultTableModel) table.getModel();
+        Scanner s=null;
+        try {
+            s = new Scanner(f);
+            int i=0;
+            while (s.hasNextLine()) {
+                String linea = s.nextLine();
+                String[] campos = linea.split(",");
+                model.setValueAt(campos[1], 0, i);
+                i+=1;
+            }
+        } catch (Exception ex) {
+            System.out.println("Mensaje: " + ex.getMessage());
+        } finally {
+            try {
+                if (s != null) {
+                    s.close();
+                }
+            } catch (Exception ex2) {
+                System.out.println("Mensaje 2: " + ex2.getMessage());
+            }
+        }
     }
 
     /**
@@ -37,11 +68,19 @@ public class AddEntrada extends javax.swing.JFrame {
         volver = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
         topbar = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
+        title = new javax.swing.JLabel();
+        days = new javax.swing.JComboBox<>();
+        precio = new javax.swing.JTextField();
+        add = new javax.swing.JLabel();
+        save = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         back.setBackground(new java.awt.Color(255, 255, 255));
+        back.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         back.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         volver.setBackground(new java.awt.Color(255, 255, 255));
@@ -77,7 +116,7 @@ public class AddEntrada extends javax.swing.JFrame {
                 closeMouseExited(evt);
             }
         });
-        back.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 40, 40));
+        back.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 0, 40, 40));
 
         topbar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         topbar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -90,17 +129,79 @@ public class AddEntrada extends javax.swing.JFrame {
                 topbarMousePressed(evt);
             }
         });
-        back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 40));
+        back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 40));
+
+        table.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 12)); // NOI18N
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(table);
+
+        back.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 620, 50));
+
+        title.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        title.setText("Precios de boletas");
+        back.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 160, 26));
+
+        days.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 12)); // NOI18N
+        days.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo" }));
+        back.add(days, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, -1, -1));
+
+        precio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                precioKeyTyped(evt);
+            }
+        });
+        back.add(precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 110, 20));
+
+        add.setBackground(new java.awt.Color(255, 255, 255));
+        add.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 11)); // NOI18N
+        add.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        add.setText("Agregar");
+        add.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add.setOpaque(true);
+        add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addMouseClicked(evt);
+            }
+        });
+        back.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 60, 30));
+
+        save.setBackground(new java.awt.Color(255, 255, 255));
+        save.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 11)); // NOI18N
+        save.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        save.setText("Guardar");
+        save.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        save.setOpaque(true);
+        save.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                saveMouseClicked(evt);
+            }
+        });
+        back.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 70, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 672, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
+            .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -117,7 +218,7 @@ public class AddEntrada extends javax.swing.JFrame {
 
     public static int x;
     public static int y;
-    
+
     private void closeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseClicked
         this.dispose();
         System.exit(0);
@@ -146,6 +247,61 @@ public class AddEntrada extends javax.swing.JFrame {
     private void volverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseExited
         volver.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_volverMouseExited
+
+    private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
+        if (!precio.getText().equals("")) {
+            int columna = days.getSelectedIndex();
+            DefaultTableModel model = (DefaultTableModel) table.getModel();
+            model.setValueAt(precio.getText(), 0, columna);
+//            precio.setText("");
+        } else {
+            JOptionPane.showMessageDialog(null, "Campo del precio vacio", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_addMouseClicked
+
+    private void precioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_precioKeyTyped
+        char c = evt.getKeyChar();
+        if (c < '0' || c > '9') {
+            getToolkit().beep();
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_precioKeyTyped
+
+    private void saveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveMouseClicked
+
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        boolean sw = false;
+        for (int i = 0; i < table.getColumnCount(); i++) {
+            if (String.valueOf(model.getValueAt(0, i)).equals("null")) {
+                sw = true;
+            }
+        }
+
+        if (sw == true) {
+            JOptionPane.showMessageDialog(null, "Todos los días deben tener precios asignados", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            File f = new File("precios.txt");
+            try {
+                BufferedWriter bw2 = new BufferedWriter(new FileWriter(f));
+                bw2.write("");
+                bw2.close();
+            } catch (Exception ex) {
+                System.out.println(ex.toString());
+            }
+            for (int i = 0; i < table.getColumnCount(); i++) {
+
+                try (java.io.BufferedWriter bw = new java.io.BufferedWriter(new FileWriter(f, true));) {
+                    bw.write(String.valueOf(days.getItemAt(i)).toLowerCase() + "," + model.getValueAt(0, i));
+                    bw.newLine();
+
+                } catch (Exception e) {
+                    System.out.println(e.toString());
+                }
+            }
+
+        }
+    }//GEN-LAST:event_saveMouseClicked
 
     /**
      * @param args the command line arguments
@@ -183,8 +339,15 @@ public class AddEntrada extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel add;
     private javax.swing.JPanel back;
     private javax.swing.JLabel close;
+    private javax.swing.JComboBox<String> days;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField precio;
+    private javax.swing.JLabel save;
+    private javax.swing.JTable table;
+    private javax.swing.JLabel title;
     private javax.swing.JLabel topbar;
     private javax.swing.JLabel volver;
     // End of variables declaration//GEN-END:variables

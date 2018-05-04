@@ -82,10 +82,8 @@ public class Admin extends javax.swing.JFrame implements Runnable {
         topbar = new javax.swing.JLabel();
         hour = new javax.swing.JLabel();
         fecha = new javax.swing.JLabel();
-        agregarpelis = new javax.swing.JLabel();
         pdisponibles = new javax.swing.JLabel();
         entradas = new javax.swing.JLabel();
-        horarios = new javax.swing.JLabel();
         addadmin = new javax.swing.JLabel();
         cartelera = new javax.swing.JLabel();
 
@@ -145,33 +143,12 @@ public class Admin extends javax.swing.JFrame implements Runnable {
         fecha.setText("DD/MM/YYYY");
         background.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 170, 30));
 
-        agregarpelis.setBackground(new java.awt.Color(255, 255, 255));
-        agregarpelis.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
-        agregarpelis.setForeground(new java.awt.Color(153, 153, 153));
-        agregarpelis.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        agregarpelis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Movie_85px.png"))); // NOI18N
-        agregarpelis.setText("Agregar Peliculas");
-        agregarpelis.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        agregarpelis.setOpaque(true);
-        agregarpelis.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                agregarpelisMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                agregarpelisMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                agregarpelisMouseExited(evt);
-            }
-        });
-        background.add(agregarpelis, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 210, 100));
-
         pdisponibles.setBackground(new java.awt.Color(255, 255, 255));
         pdisponibles.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
         pdisponibles.setForeground(new java.awt.Color(153, 153, 153));
         pdisponibles.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pdisponibles.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Movie Projector_85px.png"))); // NOI18N
-        pdisponibles.setText("Peliculas disponibles");
+        pdisponibles.setText("Gestionar Peliculas");
         pdisponibles.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pdisponibles.setOpaque(true);
         pdisponibles.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -185,7 +162,7 @@ public class Admin extends javax.swing.JFrame implements Runnable {
                 pdisponiblesMouseExited(evt);
             }
         });
-        background.add(pdisponibles, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 200, 100));
+        background.add(pdisponibles, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 200, 100));
 
         entradas.setBackground(new java.awt.Color(255, 255, 255));
         entradas.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
@@ -206,28 +183,7 @@ public class Admin extends javax.swing.JFrame implements Runnable {
                 entradasMouseExited(evt);
             }
         });
-        background.add(entradas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 210, 100));
-
-        horarios.setBackground(new java.awt.Color(255, 255, 255));
-        horarios.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
-        horarios.setForeground(new java.awt.Color(153, 153, 153));
-        horarios.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        horarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Schedule_85px.png"))); // NOI18N
-        horarios.setText("Horarios");
-        horarios.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        horarios.setOpaque(true);
-        horarios.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                horariosMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                horariosMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                horariosMouseExited(evt);
-            }
-        });
-        background.add(horarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 210, 100));
+        background.add(entradas, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 200, 100));
 
         addadmin.setBackground(new java.awt.Color(255, 255, 255));
         addadmin.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
@@ -248,7 +204,7 @@ public class Admin extends javax.swing.JFrame implements Runnable {
                 addadminMouseExited(evt);
             }
         });
-        background.add(addadmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 200, 100));
+        background.add(addadmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 200, 100));
 
         cartelera.setBackground(new java.awt.Color(255, 255, 255));
         cartelera.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
@@ -269,18 +225,18 @@ public class Admin extends javax.swing.JFrame implements Runnable {
                 carteleraMouseExited(evt);
             }
         });
-        background.add(cartelera, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 200, 100));
+        background.add(cartelera, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 200, 100));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -313,22 +269,6 @@ public class Admin extends javax.swing.JFrame implements Runnable {
         close.setIcon(new ImageIcon("src/imagenes/Delete_25px.png"));
     }//GEN-LAST:event_closeMouseExited
 
-    private void agregarpelisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregarpelisMouseClicked
-        AddPeliculas ventana=new AddPeliculas();
-        this.setVisible(false);
-        ventana.setVisible(true);
-    }//GEN-LAST:event_agregarpelisMouseClicked
-
-    private void agregarpelisMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregarpelisMouseEntered
-        agregarpelis.setBackground(new Color(240,240,240));
-        agregarpelis.setForeground(new Color(0,0,0));
-    }//GEN-LAST:event_agregarpelisMouseEntered
-
-    private void agregarpelisMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregarpelisMouseExited
-        agregarpelis.setBackground(new Color(255,255,255));
-        agregarpelis.setForeground(new Color(153,153,153));
-    }//GEN-LAST:event_agregarpelisMouseExited
-
     private void pdisponiblesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pdisponiblesMouseClicked
         ListaPeliculas ventana=new ListaPeliculas();
         this.setVisible(false);
@@ -346,7 +286,9 @@ public class Admin extends javax.swing.JFrame implements Runnable {
     }//GEN-LAST:event_pdisponiblesMouseExited
 
     private void entradasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entradasMouseClicked
-        // TODO add your handling code here:
+        AddEntrada ventana=new AddEntrada();
+        this.setVisible(false);
+        ventana.setVisible(true);
     }//GEN-LAST:event_entradasMouseClicked
 
     private void entradasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entradasMouseEntered
@@ -358,20 +300,6 @@ public class Admin extends javax.swing.JFrame implements Runnable {
         entradas.setBackground(new Color(255,255,255));
         entradas.setForeground(new Color(153,153,153));
     }//GEN-LAST:event_entradasMouseExited
-
-    private void horariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_horariosMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_horariosMouseClicked
-
-    private void horariosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_horariosMouseEntered
-        horarios.setBackground(new Color(240,240,240));
-        horarios.setForeground(new Color(0,0,0));
-    }//GEN-LAST:event_horariosMouseEntered
-
-    private void horariosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_horariosMouseExited
-        horarios.setBackground(new Color(255,255,255));
-        horarios.setForeground(new Color(153,153,153));
-    }//GEN-LAST:event_horariosMouseExited
 
     private void addadminMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addadminMouseEntered
         addadmin.setBackground(new Color(240,240,240));
@@ -449,13 +377,11 @@ public class Admin extends javax.swing.JFrame implements Runnable {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel addadmin;
-    private javax.swing.JLabel agregarpelis;
     private javax.swing.JPanel background;
     private javax.swing.JLabel cartelera;
     private javax.swing.JLabel close;
     private javax.swing.JLabel entradas;
     private javax.swing.JLabel fecha;
-    private javax.swing.JLabel horarios;
     private javax.swing.JLabel hour;
     private javax.swing.JLabel logout;
     private javax.swing.JLabel pdisponibles;

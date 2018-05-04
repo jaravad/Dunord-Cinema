@@ -28,8 +28,7 @@ public class Cartelera extends javax.swing.JFrame {
         initComponents();
         AWTUtilities.setWindowOpaque(this, false);
         setLocationRelativeTo(null);
-        
-        
+
     }
 
     /**
@@ -172,7 +171,7 @@ public class Cartelera extends javax.swing.JFrame {
     }//GEN-LAST:event_closeMouseClicked
 
     public static String name;
-    
+
     private void closeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseEntered
         close.setBackground(new Color(255, 51, 51));
         close.setIcon(new ImageIcon("src/imagenes/Deletewhite_25px.png"));
@@ -184,9 +183,15 @@ public class Cartelera extends javax.swing.JFrame {
     }//GEN-LAST:event_closeMouseExited
 
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
-        Admin u = new Admin();
-        this.setVisible(false);
-        u.setVisible(true);
+        if (LogIn.sw == true) {
+            User u = new User();
+            this.setVisible(false);
+            u.setVisible(true);
+        } else {
+            Admin v = new Admin();
+            this.setVisible(false);
+            v.setVisible(true);
+        }
     }//GEN-LAST:event_volverMouseClicked
 
     private void volverMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseEntered
@@ -209,37 +214,37 @@ public class Cartelera extends javax.swing.JFrame {
     }//GEN-LAST:event_topbarMousePressed
 
     private void sala1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sala1MouseClicked
-        name="Sala1";
-        HorariosSala h=new HorariosSala();
+        name = "Sala1";
+        HorariosSala h = new HorariosSala();
         this.setVisible(false);
         h.setVisible(true);
     }//GEN-LAST:event_sala1MouseClicked
 
     private void sala1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sala1MouseEntered
-        sala1.setBackground(new Color(240,240,240));
-        sala1.setForeground(new Color(0,0,0));
+        sala1.setBackground(new Color(240, 240, 240));
+        sala1.setForeground(new Color(0, 0, 0));
     }//GEN-LAST:event_sala1MouseEntered
 
     private void sala1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sala1MouseExited
-        sala1.setBackground(new Color(255,255,255));
-        sala1.setForeground(new Color(153,153,153));
+        sala1.setBackground(new Color(255, 255, 255));
+        sala1.setForeground(new Color(153, 153, 153));
     }//GEN-LAST:event_sala1MouseExited
 
     private void sala2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sala2MouseClicked
-        name="Sala2";
-        HorariosSala h=new HorariosSala();
+        name = "Sala2";
+        HorariosSala h = new HorariosSala();
         this.setVisible(false);
         h.setVisible(true);
     }//GEN-LAST:event_sala2MouseClicked
 
     private void sala2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sala2MouseEntered
-        sala2.setBackground(new Color(240,240,240));
-        sala2.setForeground(new Color(0,0,0));
+        sala2.setBackground(new Color(240, 240, 240));
+        sala2.setForeground(new Color(0, 0, 0));
     }//GEN-LAST:event_sala2MouseEntered
 
     private void sala2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sala2MouseExited
-        sala2.setBackground(new Color(255,255,255));
-        sala2.setForeground(new Color(153,153,153));
+        sala2.setBackground(new Color(255, 255, 255));
+        sala2.setForeground(new Color(153, 153, 153));
     }//GEN-LAST:event_sala2MouseExited
 
     /**

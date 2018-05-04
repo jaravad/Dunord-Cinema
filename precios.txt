@@ -1,0 +1,7 @@
+﻿lunes,12000
+martes,4500
+miércoles,4500
+jueves,7500
+viernes,7500
+sábado,12000
+domingo,12000

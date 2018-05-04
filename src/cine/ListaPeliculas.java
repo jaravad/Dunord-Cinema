@@ -72,6 +72,7 @@ public class ListaPeliculas extends javax.swing.JFrame {
         title = new javax.swing.JLabel();
         delete = new javax.swing.JLabel();
         modify = new javax.swing.JLabel();
+        add = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -203,6 +204,26 @@ public class ListaPeliculas extends javax.swing.JFrame {
         });
         back.add(modify, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 180, 60, 30));
 
+        add.setBackground(new java.awt.Color(255, 255, 255));
+        add.setFont(new java.awt.Font("Microsoft JhengHei", 1, 12)); // NOI18N
+        add.setForeground(new java.awt.Color(0, 102, 255));
+        add.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        add.setText("Agregar");
+        add.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 255)));
+        add.setOpaque(true);
+        add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                addMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                addMouseExited(evt);
+            }
+        });
+        back.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 230, 60, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -324,6 +345,21 @@ public class ListaPeliculas extends javax.swing.JFrame {
         volver.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_volverMouseExited
 
+    private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
+        AddPeliculas ventana=new AddPeliculas();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_addMouseClicked
+
+    private void addMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseEntered
+        add.setForeground(Color.WHITE);
+        add.setBackground(new Color(0,102,255));
+    }//GEN-LAST:event_addMouseEntered
+
+    private void addMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseExited
+        add.setForeground(new Color(0,102,255));
+        add.setBackground(Color.WHITE);
+    }//GEN-LAST:event_addMouseExited
+
     /**
      * bo
      *
@@ -363,6 +399,7 @@ public class ListaPeliculas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel add;
     private javax.swing.JPanel back;
     private javax.swing.JLabel close;
     private javax.swing.JLabel delete;

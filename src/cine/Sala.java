@@ -1121,13 +1121,13 @@ public class Sala extends javax.swing.JFrame {
             BufferedWriter bw2 = new BufferedWriter(new FileWriter(f));
             bw2.write("");
             bw2.close();
-            
+
         } catch (Exception e) {
             System.out.println("Mensaje: " + e.toString());
         }
 
         for (Silla x : sillas) {
-           
+
             try (java.io.BufferedWriter bw = new java.io.BufferedWriter(new FileWriter(f, true));) {
                 bw.write(x.posicion.getName() + "," + String.valueOf(x.state));
                 bw.newLine();
@@ -1141,8 +1141,8 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_saveMouseClicked
 
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
-        
-        HorariosSala h=new HorariosSala();
+
+        HorariosSala h = new HorariosSala();
         this.setVisible(false);
         h.setVisible(true);
     }//GEN-LAST:event_volverMouseClicked
@@ -1156,7 +1156,7 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_volverMouseExited
 
     private void C1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C1MouseClicked
-      DobleClick(evt, C1);
+        DobleClick(evt, C1);
     }//GEN-LAST:event_C1MouseClicked
 
     private void C3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C3MouseClicked
@@ -1164,7 +1164,7 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_C3MouseClicked
 
     private void C4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C4MouseClicked
-       DobleClick(evt, C4);
+        DobleClick(evt, C4);
     }//GEN-LAST:event_C4MouseClicked
 
     private void C5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C5MouseClicked
@@ -1180,7 +1180,7 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_C7MouseClicked
 
     private void C8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C8MouseClicked
-       DobleClick(evt, C8);
+        DobleClick(evt, C8);
     }//GEN-LAST:event_C8MouseClicked
 
     private void C9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C9MouseClicked
@@ -1188,11 +1188,11 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_C9MouseClicked
 
     private void C10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C10MouseClicked
-       DobleClick(evt, C10);
+        DobleClick(evt, C10);
     }//GEN-LAST:event_C10MouseClicked
 
     private void D1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D1MouseClicked
-       DobleClick(evt, D1);
+        DobleClick(evt, D1);
     }//GEN-LAST:event_D1MouseClicked
 
     private void D2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D2MouseClicked
@@ -1200,23 +1200,23 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_D2MouseClicked
 
     private void D3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D3MouseClicked
-       DobleClick(evt, D3);
+        DobleClick(evt, D3);
     }//GEN-LAST:event_D3MouseClicked
 
     private void D4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D4MouseClicked
-      DobleClick(evt, D4);
+        DobleClick(evt, D4);
     }//GEN-LAST:event_D4MouseClicked
 
     private void D5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D5MouseClicked
-       DobleClick(evt, D5);
+        DobleClick(evt, D5);
     }//GEN-LAST:event_D5MouseClicked
 
     private void D6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D6MouseClicked
-       DobleClick(evt, D6);
+        DobleClick(evt, D6);
     }//GEN-LAST:event_D6MouseClicked
 
     private void D7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D7MouseClicked
-       DobleClick(evt, D7);
+        DobleClick(evt, D7);
     }//GEN-LAST:event_D7MouseClicked
 
     private void D8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D8MouseClicked
@@ -1224,28 +1224,28 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_D8MouseClicked
 
     private void D9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D9MouseClicked
-       DobleClick(evt, D9);
+        DobleClick(evt, D9);
     }//GEN-LAST:event_D9MouseClicked
 
     private void D10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_D10MouseClicked
-       DobleClick(evt, D10);
+        DobleClick(evt, D10);
     }//GEN-LAST:event_D10MouseClicked
 
     private void E1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E1MouseClicked
-       DobleClick(evt, E1);
+        DobleClick(evt, E1);
     }//GEN-LAST:event_E1MouseClicked
 
     private void E2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E2MouseClicked
-       DobleClick(evt, E2);
+        DobleClick(evt, E2);
     }//GEN-LAST:event_E2MouseClicked
 
     private void E3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E3MouseClicked
-       
+
         DobleClick(evt, E3);
     }//GEN-LAST:event_E3MouseClicked
 
     private void E4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E4MouseClicked
-       DobleClick(evt, E4);
+        DobleClick(evt, E4);
     }//GEN-LAST:event_E4MouseClicked
 
     private void E5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E5MouseClicked
@@ -1257,7 +1257,7 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_E6MouseClicked
 
     private void E7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E7MouseClicked
-       DobleClick(evt, E7);
+        DobleClick(evt, E7);
     }//GEN-LAST:event_E7MouseClicked
 
     private void E8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E8MouseClicked
@@ -1277,11 +1277,11 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_F1MouseClicked
 
     private void F2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F2MouseClicked
-       DobleClick(evt, F2);
+        DobleClick(evt, F2);
     }//GEN-LAST:event_F2MouseClicked
 
     private void F3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F3MouseClicked
-       DobleClick(evt, F3);
+        DobleClick(evt, F3);
     }//GEN-LAST:event_F3MouseClicked
 
     private void F4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F4MouseClicked
@@ -1289,27 +1289,27 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_F4MouseClicked
 
     private void F5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F5MouseClicked
-       DobleClick(evt, F5);
+        DobleClick(evt, F5);
     }//GEN-LAST:event_F5MouseClicked
 
     private void F6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F6MouseClicked
-       DobleClick(evt, F6);
+        DobleClick(evt, F6);
     }//GEN-LAST:event_F6MouseClicked
 
     private void F7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F7MouseClicked
-       DobleClick(evt, F7);
+        DobleClick(evt, F7);
     }//GEN-LAST:event_F7MouseClicked
 
     private void F8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F8MouseClicked
-       DobleClick(evt, F8);
+        DobleClick(evt, F8);
     }//GEN-LAST:event_F8MouseClicked
 
     private void F9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F9MouseClicked
-       DobleClick(evt, F9);
+        DobleClick(evt, F9);
     }//GEN-LAST:event_F9MouseClicked
 
     private void F10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_F10MouseClicked
-       DobleClick(evt, F10);
+        DobleClick(evt, F10);
     }//GEN-LAST:event_F10MouseClicked
 
     private void G1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G1MouseClicked
@@ -1317,31 +1317,31 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_G1MouseClicked
 
     private void G2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G2MouseClicked
-       DobleClick(evt, G2);
+        DobleClick(evt, G2);
     }//GEN-LAST:event_G2MouseClicked
 
     private void G3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G3MouseClicked
-       DobleClick(evt, G3);
+        DobleClick(evt, G3);
     }//GEN-LAST:event_G3MouseClicked
 
     private void G4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G4MouseClicked
-       DobleClick(evt, G4);
+        DobleClick(evt, G4);
     }//GEN-LAST:event_G4MouseClicked
 
     private void G5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G5MouseClicked
-      DobleClick(evt, G5);
+        DobleClick(evt, G5);
     }//GEN-LAST:event_G5MouseClicked
 
     private void G6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G6MouseClicked
-  DobleClick(evt, G6);
+        DobleClick(evt, G6);
     }//GEN-LAST:event_G6MouseClicked
 
     private void G7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G7MouseClicked
-       DobleClick(evt, G7);
+        DobleClick(evt, G7);
     }//GEN-LAST:event_G7MouseClicked
 
     private void G8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G8MouseClicked
-       DobleClick(evt, G8);
+        DobleClick(evt, G8);
     }//GEN-LAST:event_G8MouseClicked
 
     private void G9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G9MouseClicked
@@ -1349,11 +1349,11 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_G9MouseClicked
 
     private void G10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_G10MouseClicked
-       DobleClick(evt, G10);
+        DobleClick(evt, G10);
     }//GEN-LAST:event_G10MouseClicked
 
     private void C2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C2MouseClicked
-       DobleClick(evt, C2);
+        DobleClick(evt, C2);
     }//GEN-LAST:event_C2MouseClicked
 
     void DobleClick(java.awt.event.MouseEvent evt, JLabel lbl) {
@@ -1365,10 +1365,14 @@ public class Sala extends javax.swing.JFrame {
                         x.state = false;
                         lbl.setIcon(new ImageIcon("src/imagenes/red.png"));
                     } else {
-                        x.state = true;
-                        lbl.setIcon(new ImageIcon("src/imagenes/disponible.png"));
+                        if (LogIn.sw==false) {
+                            x.state = true;
+                            lbl.setIcon(new ImageIcon("src/imagenes/disponible.png"));
+
+                        }
+
                     }
-                    
+
                 }
             }
         }

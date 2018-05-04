@@ -6,7 +6,7 @@ public class Cine {
 
     
     public static void main(String[] args) {
-        AddFunciones ventana = new AddFunciones();
+        LogIn ventana = new LogIn();
         ventana.setVisible(true);
     }
     

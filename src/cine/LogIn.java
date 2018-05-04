@@ -23,7 +23,7 @@ public class LogIn extends javax.swing.JFrame {
         AWTUtilities.setWindowOpaque(this, false);
         setLocationRelativeTo(null);
     }
-
+    public static boolean sw;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -136,6 +136,7 @@ public class LogIn extends javax.swing.JFrame {
         LogInUsuario ventana = new LogInUsuario();
         this.setVisible(false);
         ventana.setVisible(true);
+        sw=true;
     }//GEN-LAST:event_usuarioMouseClicked
 
     private void usuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuarioMouseEntered
@@ -178,6 +179,7 @@ public class LogIn extends javax.swing.JFrame {
         LogInAdmin ventana = new LogInAdmin();
         this.setVisible(false);
         ventana.setVisible(true);
+        sw=false;
     }//GEN-LAST:event_adminMouseClicked
 
     private void adminMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adminMouseEntered

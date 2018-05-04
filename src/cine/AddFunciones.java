@@ -75,7 +75,7 @@ public class AddFunciones extends javax.swing.JFrame {
             SubNodo q = p.linksubNodo;
 
             while (q != null) {
-                model.addElement("-> " + q.pelicula + ":   " + q.fechain + "  --  " + q.fechafin + "  |  " + q.formato + "  |  " + q.code);
+                model.addElement("-> " + q.pelicula + ":   " + "Empieza: "+q.fechain + "  --  " +  "Termina: "+q.fechafin + "  |  " + q.formato + "  |  " + q.code);
 
                 q = q.link2;
 
@@ -205,10 +205,10 @@ public class AddFunciones extends javax.swing.JFrame {
         pelicula.setText("Película");
         back.add(pelicula, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 50, 20));
 
-        list.setFont(new java.awt.Font("Microsoft JhengHei Light", 0, 12)); // NOI18N
+        list.setFont(new java.awt.Font("Leelawadee UI Semilight", 0, 12)); // NOI18N
         jScrollPane1.setViewportView(list);
 
-        back.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 600, 200));
+        back.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 760, 200));
 
         hin.setBackground(new java.awt.Color(255, 255, 255));
         hin.setFont(new java.awt.Font("Microsoft YaHei", 0, 10)); // NOI18N
@@ -237,7 +237,7 @@ public class AddFunciones extends javax.swing.JFrame {
                 deleteMouseExited(evt);
             }
         });
-        back.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 330, 20, 20));
+        back.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 330, 20, 20));
 
         add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Add_20px.png"))); // NOI18N
         add.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -251,7 +251,7 @@ public class AddFunciones extends javax.swing.JFrame {
                 addMouseExited(evt);
             }
         });
-        back.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 300, 20, 20));
+        back.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 300, 20, 20));
 
         close.setBackground(new java.awt.Color(255, 255, 255));
         close.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -268,7 +268,7 @@ public class AddFunciones extends javax.swing.JFrame {
                 closeMouseExited(evt);
             }
         });
-        back.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 0, 40, 40));
+        back.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 40, 40));
 
         volver.setBackground(new java.awt.Color(255, 255, 255));
         volver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -299,7 +299,7 @@ public class AddFunciones extends javax.swing.JFrame {
                 topbarMousePressed(evt);
             }
         });
-        back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 40));
+        back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 40));
 
         Dia.setBackground(new java.awt.Color(255, 255, 255));
         Dia.setFont(new java.awt.Font("Microsoft YaHei", 0, 10)); // NOI18N
@@ -356,13 +356,13 @@ public class AddFunciones extends javax.swing.JFrame {
                 guardarMouseExited(evt);
             }
         });
-        back.add(guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 510, 70, 30));
+        back.add(guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 510, 70, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 672, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
