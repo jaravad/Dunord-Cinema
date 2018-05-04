@@ -197,7 +197,7 @@ public class Sala extends javax.swing.JFrame {
             }
         }
         LlenarSillas();
-
+        
     }
 
     ArrayList<Silla> sillas;
@@ -288,6 +288,7 @@ public class Sala extends javax.swing.JFrame {
         topbar = new javax.swing.JLabel();
         save = new javax.swing.JLabel();
         pantalla = new javax.swing.JLabel();
+        comprar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -993,6 +994,15 @@ public class Sala extends javax.swing.JFrame {
         pantalla.setOpaque(true);
         jPanel1.add(pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, 430, 10));
 
+        comprar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        comprar.setText("Comprar");
+        comprar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                comprarMouseClicked(evt);
+            }
+        });
+        jPanel1.add(comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, 60, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1140,6 +1150,29 @@ public class Sala extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Cambios guardados satisfactoriamente", "Aviso", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_saveMouseClicked
 
+    public void save(){
+         File f = new File("Sillas/" + HorariosSala.globalcode + ".txt");
+        try {
+            BufferedWriter bw2 = new BufferedWriter(new FileWriter(f));
+            bw2.write("");
+            bw2.close();
+
+        } catch (Exception e) {
+            System.out.println("Mensaje: " + e.toString());
+        }
+
+        for (Silla x : sillas) {
+
+            try (java.io.BufferedWriter bw = new java.io.BufferedWriter(new FileWriter(f, true));) {
+                bw.write(x.posicion.getName() + "," + String.valueOf(x.state));
+                bw.newLine();
+
+            } catch (Exception e) {
+                System.out.println(e.toString());
+            }
+
+        }
+    }
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
 
         HorariosSala h = new HorariosSala();
@@ -1356,14 +1389,47 @@ public class Sala extends javax.swing.JFrame {
         DobleClick(evt, C2);
     }//GEN-LAST:event_C2MouseClicked
 
+    private void comprarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comprarMouseClicked
+        Compra c=new Compra();
+        c.setVisible(true);
+        File s=new File("precios.txt");
+        Scanner p=null;
+        try {
+            p = new Scanner(s);
+            while (p.hasNextLine()) {
+                String linea = p.nextLine();
+                String[] campos32 = linea.split(",");
+                String nombre=campos32[0];
+                if (nombre.equals(HorariosSala.dia)) {
+                    dinero=Integer.parseInt(campos32[1])*(cont);
+                }
+                
+            }
+        } catch (Exception ex) {
+            System.out.println("Mensaje: " + ex.toString());
+        } finally {
+            try {
+                if (p != null) {
+                    p.close();
+                }
+            } catch (Exception ex2) {
+                System.out.println("Mensaje 2: " + ex2.getMessage());
+            }
+        }
+        System.out.println(cont+""+dinero);
+        Compra.price.setText(String.valueOf(Sala.dinero));
+    }//GEN-LAST:event_comprarMouseClicked
+    public static int cont,dinero;
     void DobleClick(java.awt.event.MouseEvent evt, JLabel lbl) {
         if (evt.getClickCount() == 2) {
+            
             for (Silla x : sillas) {
 
                 if (x.posicion.equals(lbl)) {
                     if (x.state == true) {
                         x.state = false;
                         lbl.setIcon(new ImageIcon("src/imagenes/red.png"));
+                        cont+=1;
                     } else {
                         if (LogIn.sw==false) {
                             x.state = true;
@@ -1495,6 +1561,7 @@ public class Sala extends javax.swing.JFrame {
     private javax.swing.JLabel G8;
     private javax.swing.JLabel G9;
     private javax.swing.JLabel close;
+    private javax.swing.JLabel comprar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel pantalla;
     private javax.swing.JLabel save;

@@ -80,6 +80,7 @@ public class HorariosSala extends javax.swing.JFrame {
     }
     
     public static String globalcode;
+    public static String dia;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -249,6 +250,9 @@ public class HorariosSala extends javax.swing.JFrame {
         if (evt.getClickCount() == 2) {
             DefaultTableModel model = (DefaultTableModel) table.getModel();
             globalcode=String.valueOf(model.getValueAt(table.getSelectedRow(),4));
+            String []campos=String.valueOf(model.getValueAt(table.getSelectedRow(), 1)).split(" ");
+            dia=campos[0];
+            System.out.println(dia);
             Sala s=new Sala();
             s.setVisible(true);
             this.setVisible(false);

@@ -73,7 +73,7 @@ public class User extends javax.swing.JFrame {
                 topbarMousePressed(evt);
             }
         });
-        back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, 0, 640, 40));
+        back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, 0, 650, 40));
 
         cartelera.setBackground(new java.awt.Color(255, 255, 255));
         cartelera.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N

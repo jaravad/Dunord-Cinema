@@ -129,7 +129,7 @@ public class AddEntrada extends javax.swing.JFrame {
                 topbarMousePressed(evt);
             }
         });
-        back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 40));
+        back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 40));
 
         table.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 12)); // NOI18N
         table.setModel(new javax.swing.table.DefaultTableModel(
@@ -253,7 +253,7 @@ public class AddEntrada extends javax.swing.JFrame {
             int columna = days.getSelectedIndex();
             DefaultTableModel model = (DefaultTableModel) table.getModel();
             model.setValueAt(precio.getText(), 0, columna);
-//            precio.setText("");
+            precio.setText("");
         } else {
             JOptionPane.showMessageDialog(null, "Campo del precio vacio", "Error", JOptionPane.ERROR_MESSAGE);
         }
