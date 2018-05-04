@@ -108,7 +108,7 @@ public class Cartelera extends javax.swing.JFrame {
         back.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 150, 26));
 
         sala1.setBackground(new java.awt.Color(255, 255, 255));
-        sala1.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        sala1.setFont(new java.awt.Font("Microsoft JhengHei", 0, 18)); // NOI18N
         sala1.setForeground(new java.awt.Color(153, 153, 153));
         sala1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         sala1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/1_85px.png"))); // NOI18N
@@ -129,7 +129,7 @@ public class Cartelera extends javax.swing.JFrame {
         back.add(sala1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 150, 100));
 
         sala2.setBackground(new java.awt.Color(255, 255, 255));
-        sala2.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        sala2.setFont(new java.awt.Font("Microsoft JhengHei", 0, 18)); // NOI18N
         sala2.setForeground(new java.awt.Color(153, 153, 153));
         sala2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         sala2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/2_85px.png"))); // NOI18N

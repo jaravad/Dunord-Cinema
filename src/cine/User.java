@@ -122,10 +122,10 @@ public class User extends javax.swing.JFrame implements Runnable {
         back.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, 0, 650, 40));
 
         cartelera.setBackground(new java.awt.Color(255, 255, 255));
-        cartelera.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        cartelera.setFont(new java.awt.Font("Microsoft JhengHei", 0, 18)); // NOI18N
         cartelera.setForeground(new java.awt.Color(153, 153, 153));
         cartelera.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        cartelera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Clapperboard_85px.png"))); // NOI18N
+        cartelera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CarteleraUsuario.png"))); // NOI18N
         cartelera.setText("  Cartelera");
         cartelera.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         cartelera.setOpaque(true);
@@ -140,7 +140,7 @@ public class User extends javax.swing.JFrame implements Runnable {
                 carteleraMouseExited(evt);
             }
         });
-        back.add(cartelera, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 200, 100));
+        back.add(cartelera, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 240, 110));
 
         hour.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 34)); // NOI18N
         hour.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -160,9 +160,7 @@ public class User extends javax.swing.JFrame implements Runnable {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();

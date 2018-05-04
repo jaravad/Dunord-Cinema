@@ -261,8 +261,9 @@ public class HorariosSala extends javax.swing.JFrame {
             dia = campos[0];
 
             Sala s = new Sala();
-            s.setVisible(true);
             this.setVisible(false);
+            s.setVisible(true);
+            
         }
     }//GEN-LAST:event_tableMouseClicked
 

@@ -83,6 +83,7 @@ public class Admin extends javax.swing.JFrame implements Runnable {
         entradas = new javax.swing.JLabel();
         addadmin = new javax.swing.JLabel();
         cartelera = new javax.swing.JLabel();
+        addfunciones = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -115,7 +116,7 @@ public class Admin extends javax.swing.JFrame implements Runnable {
                 closeMouseExited(evt);
             }
         });
-        background.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 40, 40));
+        background.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 40, 40));
 
         topbar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         topbar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -133,12 +134,12 @@ public class Admin extends javax.swing.JFrame implements Runnable {
         hour.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 34)); // NOI18N
         hour.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         hour.setText("00:00:00");
-        background.add(hour, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 150, 60));
+        background.add(hour, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 150, 60));
 
         fecha.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         fecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         fecha.setText("DD/MM/YYYY");
-        background.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 170, 30));
+        background.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 170, 30));
 
         pdisponibles.setBackground(new java.awt.Color(255, 255, 255));
         pdisponibles.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
@@ -201,7 +202,7 @@ public class Admin extends javax.swing.JFrame implements Runnable {
                 addadminMouseExited(evt);
             }
         });
-        background.add(addadmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 200, 100));
+        background.add(addadmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 200, 100));
 
         cartelera.setBackground(new java.awt.Color(255, 255, 255));
         cartelera.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
@@ -222,13 +223,36 @@ public class Admin extends javax.swing.JFrame implements Runnable {
                 carteleraMouseExited(evt);
             }
         });
-        background.add(cartelera, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 200, 100));
+        background.add(cartelera, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 200, 100));
+
+        addfunciones.setBackground(new java.awt.Color(255, 255, 255));
+        addfunciones.setFont(new java.awt.Font("Microsoft JhengHei", 0, 13)); // NOI18N
+        addfunciones.setForeground(new java.awt.Color(153, 153, 153));
+        addfunciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        addfunciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Add Tag_85px.png"))); // NOI18N
+        addfunciones.setText("Añadir Funciones");
+        addfunciones.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        addfunciones.setOpaque(true);
+        addfunciones.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addfuncionesMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                addfuncionesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                addfuncionesMouseExited(evt);
+            }
+        });
+        background.add(addfunciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 200, 100));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -336,6 +360,22 @@ public class Admin extends javax.swing.JFrame implements Runnable {
         cartelera.setForeground(new Color(153,153,153));
     }//GEN-LAST:event_carteleraMouseExited
 
+    private void addfuncionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addfuncionesMouseClicked
+        AddFunciones a =new AddFunciones();
+        this.setVisible(false);
+        a.setVisible(true);
+    }//GEN-LAST:event_addfuncionesMouseClicked
+
+    private void addfuncionesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addfuncionesMouseEntered
+        addfunciones.setBackground(new Color(240,240,240));
+        addfunciones.setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_addfuncionesMouseEntered
+
+    private void addfuncionesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addfuncionesMouseExited
+        addfunciones.setBackground(new Color(255,255,255));
+        addfunciones.setForeground(new Color(153,153,153));
+    }//GEN-LAST:event_addfuncionesMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -374,6 +414,7 @@ public class Admin extends javax.swing.JFrame implements Runnable {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel addadmin;
+    private javax.swing.JLabel addfunciones;
     private javax.swing.JPanel background;
     private javax.swing.JLabel cartelera;
     private javax.swing.JLabel close;

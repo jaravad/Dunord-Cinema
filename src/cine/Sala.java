@@ -1052,7 +1052,7 @@ public class Sala extends javax.swing.JFrame {
 
     private void closeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseClicked
         this.dispose();
-        System.exit(0);
+      
     }//GEN-LAST:event_closeMouseClicked
 
     private void closeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseEntered
