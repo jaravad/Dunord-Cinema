@@ -29,7 +29,7 @@ public class Sala extends javax.swing.JFrame {
         initComponents();
         AWTUtilities.setWindowOpaque(this, false);
         setLocationRelativeTo(null);
-
+        
         sillas = new ArrayList<Silla>();
         Silla a1 = new Silla(A1, true);
         Silla a2 = new Silla(A2, true);
@@ -171,7 +171,11 @@ public class Sala extends javax.swing.JFrame {
         sillas.add(g8);
         sillas.add(g9);
         sillas.add(g10);
-
+        if (LogIn.sw == false) {
+            comprar.setVisible(false);
+        } else {
+            save.setVisible(false);
+        }
         File archivo = new File("Sillas/" + HorariosSala.globalcode + ".txt");
         Scanner s = null;
         try {
@@ -197,9 +201,12 @@ public class Sala extends javax.swing.JFrame {
             }
         }
         LlenarSillas();
-        
+        String [] fechas1= HorariosSala.fechaini.split(" ");
+          String [] fechas2= HorariosSala.fechafin.split(" ");
+          funcion.setText(fechas1[0]+" "+fechas1[1]+" "+fechas1[2]+" "+fechas1[3]+"-"+fechas2[3]+" "+fechas2[4]);
+                
     }
-
+    
     ArrayList<Silla> sillas;
 
     /**
@@ -289,6 +296,7 @@ public class Sala extends javax.swing.JFrame {
         save = new javax.swing.JLabel();
         pantalla = new javax.swing.JLabel();
         comprar = new javax.swing.JLabel();
+        funcion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -299,7 +307,7 @@ public class Sala extends javax.swing.JFrame {
 
         title.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         title.setText("Reserva de Asientos");
-        jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 180, 26));
+        jPanel1.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 200, 26));
 
         A1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disponible.png"))); // NOI18N
         A1.setName("A1"); // NOI18N
@@ -980,28 +988,52 @@ public class Sala extends javax.swing.JFrame {
         });
         jPanel1.add(topbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 40));
 
+        save.setBackground(new java.awt.Color(255, 255, 255));
+        save.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 1, 13)); // NOI18N
+        save.setForeground(new java.awt.Color(0, 153, 153));
         save.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         save.setText("Guardar");
-        save.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        save.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        save.setOpaque(true);
         save.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 saveMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                saveMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                saveMouseExited(evt);
+            }
         });
-        jPanel1.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, 70, 30));
+        jPanel1.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 70, 30));
 
         pantalla.setBackground(new java.awt.Color(153, 153, 153));
         pantalla.setOpaque(true);
         jPanel1.add(pantalla, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, 430, 10));
 
+        comprar.setBackground(new java.awt.Color(255, 255, 255));
+        comprar.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 1, 13)); // NOI18N
+        comprar.setForeground(new java.awt.Color(0, 153, 153));
         comprar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         comprar.setText("Comprar");
+        comprar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)));
+        comprar.setOpaque(true);
         comprar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 comprarMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                comprarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                comprarMouseExited(evt);
+            }
         });
-        jPanel1.add(comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, 60, 30));
+        jPanel1.add(comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, 70, 30));
+
+        funcion.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        jPanel1.add(funcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 320, 26));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1035,7 +1067,7 @@ public class Sala extends javax.swing.JFrame {
     private void topbarMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_topbarMouseDragged
         this.setLocation(this.getLocation().x + evt.getX() - x, this.getLocation().y + evt.getY() - y);
     }//GEN-LAST:event_topbarMouseDragged
-
+    
     public static int x;
     public static int y;
 
@@ -1057,7 +1089,7 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_A3MouseClicked
 
     private void A4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A4MouseClicked
-
+        
         DobleClick(evt, A4);
     }//GEN-LAST:event_A4MouseClicked
 
@@ -1131,50 +1163,53 @@ public class Sala extends javax.swing.JFrame {
             BufferedWriter bw2 = new BufferedWriter(new FileWriter(f));
             bw2.write("");
             bw2.close();
-
+            
         } catch (Exception e) {
             System.out.println("Mensaje: " + e.toString());
         }
-
+        
         for (Silla x : sillas) {
-
+            
             try (java.io.BufferedWriter bw = new java.io.BufferedWriter(new FileWriter(f, true));) {
                 bw.write(x.posicion.getName() + "," + String.valueOf(x.state));
                 bw.newLine();
-
+                
             } catch (Exception e) {
                 System.out.println(e.toString());
             }
-
+            
         }
         JOptionPane.showMessageDialog(null, "Cambios guardados satisfactoriamente", "Aviso", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_saveMouseClicked
-
-    public void save(){
-         File f = new File("Sillas/" + HorariosSala.globalcode + ".txt");
+    
+    public void save() {
+        System.out.println("jijij");
+         
+        File f = new File("Sillas/" + HorariosSala.globalcode + ".txt");
         try {
             BufferedWriter bw2 = new BufferedWriter(new FileWriter(f));
             bw2.write("");
             bw2.close();
-
+            
         } catch (Exception e) {
             System.out.println("Mensaje: " + e.toString());
         }
-
+        
         for (Silla x : sillas) {
-
+            
             try (java.io.BufferedWriter bw = new java.io.BufferedWriter(new FileWriter(f, true));) {
                 bw.write(x.posicion.getName() + "," + String.valueOf(x.state));
                 bw.newLine();
-
+                
             } catch (Exception e) {
                 System.out.println(e.toString());
             }
-
+            
         }
+        
     }
     private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
-
+        
         HorariosSala h = new HorariosSala();
         this.setVisible(false);
         h.setVisible(true);
@@ -1273,7 +1308,7 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_E2MouseClicked
 
     private void E3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_E3MouseClicked
-
+        
         DobleClick(evt, E3);
     }//GEN-LAST:event_E3MouseClicked
 
@@ -1390,18 +1425,20 @@ public class Sala extends javax.swing.JFrame {
     }//GEN-LAST:event_C2MouseClicked
 
     private void comprarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comprarMouseClicked
-        Compra c=new Compra();
+        
+            save();
+        Compra c = new Compra();
         c.setVisible(true);
-        File s=new File("precios.txt");
-        Scanner p=null;
+        File s = new File("precios.txt");
+        Scanner p = null;
         try {
             p = new Scanner(s);
             while (p.hasNextLine()) {
                 String linea = p.nextLine();
                 String[] campos32 = linea.split(",");
-                String nombre=campos32[0];
+                String nombre = campos32[0];
                 if (nombre.equals(HorariosSala.dia)) {
-                    dinero=Integer.parseInt(campos32[1])*(cont);
+                    dinero = Integer.parseInt(campos32[1]) * (cont);
                 }
                 
             }
@@ -1416,34 +1453,55 @@ public class Sala extends javax.swing.JFrame {
                 System.out.println("Mensaje 2: " + ex2.getMessage());
             }
         }
-        System.out.println(cont+""+dinero);
+        System.out.println(cont + "" + dinero);
         Compra.price.setText(String.valueOf(Sala.dinero));
     }//GEN-LAST:event_comprarMouseClicked
-    public static int cont,dinero;
+
+    private void comprarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comprarMouseEntered
+        comprar.setForeground(Color.WHITE);
+        comprar.setBackground(new Color(0,153,153));
+    }//GEN-LAST:event_comprarMouseEntered
+
+    private void comprarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comprarMouseExited
+        comprar.setForeground(new Color(0,153,153));
+        comprar.setBackground(Color.WHITE);
+    }//GEN-LAST:event_comprarMouseExited
+
+    private void saveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveMouseEntered
+        save.setForeground(Color.WHITE);
+        save.setBackground(new Color(0,153,153));
+    }//GEN-LAST:event_saveMouseEntered
+
+    private void saveMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveMouseExited
+        save.setForeground(new Color(0,153,153));
+        save.setBackground(Color.WHITE);
+    }//GEN-LAST:event_saveMouseExited
+    public static int cont, dinero;
+    
     void DobleClick(java.awt.event.MouseEvent evt, JLabel lbl) {
         if (evt.getClickCount() == 2) {
             
             for (Silla x : sillas) {
-
+                
                 if (x.posicion.equals(lbl)) {
                     if (x.state == true) {
                         x.state = false;
                         lbl.setIcon(new ImageIcon("src/imagenes/red.png"));
-                        cont+=1;
+                        cont += 1;
                     } else {
-                        if (LogIn.sw==false) {
+                        if (LogIn.sw == false) {
                             x.state = true;
                             lbl.setIcon(new ImageIcon("src/imagenes/disponible.png"));
-
+                            
                         }
-
+                        
                     }
-
+                    
                 }
             }
         }
     }
-
+    
     void LlenarSillas() {
         for (Silla x : sillas) {
             if (x.state == true) {
@@ -1562,6 +1620,7 @@ public class Sala extends javax.swing.JFrame {
     private javax.swing.JLabel G9;
     private javax.swing.JLabel close;
     private javax.swing.JLabel comprar;
+    private javax.swing.JLabel funcion;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel pantalla;
     private javax.swing.JLabel save;

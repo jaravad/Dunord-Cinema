@@ -245,12 +245,17 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="price">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Microsoft JhengHei UI Light" size="14" style="0"/>
+            </Property>
+          </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="140" y="180" width="130" height="40"/>
+              <AbsoluteConstraints x="150" y="180" width="120" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -263,7 +268,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="100" y="190" width="-1" height="-1"/>
+              <AbsoluteConstraints x="90" y="190" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

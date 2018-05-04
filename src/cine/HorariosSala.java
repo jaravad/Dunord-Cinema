@@ -81,6 +81,10 @@ public class HorariosSala extends javax.swing.JFrame {
     
     public static String globalcode;
     public static String dia;
+    public static String fechaini;
+    public static String fechafin;
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -250,6 +254,9 @@ public class HorariosSala extends javax.swing.JFrame {
         if (evt.getClickCount() == 2) {
             DefaultTableModel model = (DefaultTableModel) table.getModel();
             globalcode=String.valueOf(model.getValueAt(table.getSelectedRow(),4));
+            fechaini=String.valueOf(model.getValueAt(table.getSelectedRow(),1));
+            fechafin=String.valueOf(model.getValueAt(table.getSelectedRow(),2));
+            System.out.println(fechaini+" "+fechafin);
             String []campos=String.valueOf(model.getValueAt(table.getSelectedRow(), 1)).split(" ");
             dia=campos[0];
             System.out.println(dia);

@@ -8,8 +8,10 @@ package cine;
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
 import java.awt.Image;
+import java.util.Random;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -28,8 +30,7 @@ public class Compra extends javax.swing.JFrame {
         Icon icono = new ImageIcon(icon.getImage().getScaledInstance(creditcards.getWidth(), creditcards.getHeight(), Image.SCALE_SMOOTH));
         creditcards.setText(null);
         creditcards.setIcon(icono);
-        
-        
+
     }
 
     /**
@@ -159,11 +160,13 @@ public class Compra extends javax.swing.JFrame {
         title.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         title.setText("Compra de Boletos");
         back.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 180, 26));
-        back.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 130, 40));
+
+        price.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 14)); // NOI18N
+        back.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 120, 30));
 
         precio.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 12)); // NOI18N
         precio.setText("Total: ");
-        back.add(precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, -1, -1));
+        back.add(precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -228,20 +231,25 @@ public class Compra extends javax.swing.JFrame {
     }//GEN-LAST:event_securetxtFocusLost
 
     private void pagarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pagarMouseClicked
-        if(securetxt.getText().length()!=0 && nametxt.getText().length()!=0){
-            Sala a= new Sala();
-            a.save();
-            Sala.cont=0;
+        if (securetxt.getText().length() != 0 && nametxt.getText().length() != 0) {
+                      
+            Sala.cont = 0;
+            securetxt.setText("");
+            nametxt.setText("");
+            Random rnd = new Random();
+            int id = (int) (rnd.nextDouble() * 899999999 + 100000000);
+
+            JOptionPane.showMessageDialog(null, "Su codigo de referencia de transaccion es "+id, "Aviso", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_pagarMouseClicked
 
     private void pagarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pagarMouseEntered
         pagar.setForeground(Color.WHITE);
-        pagar.setBackground(new Color(0,102,255));
+        pagar.setBackground(new Color(0, 102, 255));
     }//GEN-LAST:event_pagarMouseEntered
 
     private void pagarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pagarMouseExited
-        pagar.setForeground(new Color(0,102,255));
+        pagar.setForeground(new Color(0, 102, 255));
         pagar.setBackground(Color.WHITE);
     }//GEN-LAST:event_pagarMouseExited
 

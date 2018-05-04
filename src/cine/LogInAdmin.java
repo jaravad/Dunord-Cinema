@@ -46,6 +46,7 @@ public class LogInAdmin extends javax.swing.JFrame {
         separatorpassw = new javax.swing.JSeparator();
         logo = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
+        volver = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
         topbar = new javax.swing.JLabel();
 
@@ -56,7 +57,7 @@ public class LogInAdmin extends javax.swing.JFrame {
         back.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         back.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        passwordfield.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
+        passwordfield.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 8)); // NOI18N
         passwordfield.setBorder(null);
         passwordfield.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -134,6 +135,24 @@ public class LogInAdmin extends javax.swing.JFrame {
         title.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         title.setText("Inicio de Sesión: Administrador");
         back.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 268, 26));
+
+        volver.setBackground(new java.awt.Color(255, 255, 255));
+        volver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        volver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Back Arrow_28px.png"))); // NOI18N
+        volver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        volver.setOpaque(true);
+        volver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                volverMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                volverMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                volverMouseExited(evt);
+            }
+        });
+        back.add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         close.setBackground(new java.awt.Color(255, 255, 255));
         close.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -295,6 +314,20 @@ public class LogInAdmin extends javax.swing.JFrame {
         y = evt.getY();
     }//GEN-LAST:event_topbarMousePressed
 
+    private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
+        LogIn u = new LogIn();
+        this.setVisible(false);
+        u.setVisible(true);
+    }//GEN-LAST:event_volverMouseClicked
+
+    private void volverMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseEntered
+        volver.setBackground(new Color(231, 231, 231));
+    }//GEN-LAST:event_volverMouseEntered
+
+    private void volverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseExited
+        volver.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_volverMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -343,5 +376,6 @@ public class LogInAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel topbar;
     private javax.swing.JLabel user;
     private javax.swing.JTextField usertxt;
+    private javax.swing.JLabel volver;
     // End of variables declaration//GEN-END:variables
 }

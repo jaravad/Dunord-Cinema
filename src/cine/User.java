@@ -5,26 +5,59 @@
  */
 package cine;
 
+import static cine.Admin.Fecha;
 import com.sun.awt.AWTUtilities;
 import java.awt.Color;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import javax.swing.ImageIcon;
+import java.util.*;
 
 /**
  *
  * @author Jesus David
  */
-public class User extends javax.swing.JFrame {
+public class User extends javax.swing.JFrame implements Runnable {
+    String hora, minutos, segundos;
+    Thread hilo;
 
     /**
      * Creates new form User
      */
+    
+  
     public User() {
         initComponents();
-        AWTUtilities.setWindowOpaque(this, false);
         setLocationRelativeTo(null);
-
+        fecha.setText(fecha());
+        hilo=new Thread(this);
+        hilo.start();
+        setVisible(true);
+        
     }
+    public void hora(){
+        Calendar cal=new GregorianCalendar();
+        Date horaactual=new Date();
+        cal.setTime(horaactual);
+        hora = cal.get(Calendar.HOUR_OF_DAY) > 9 ? "" + cal.get(Calendar.HOUR_OF_DAY) : "0" + cal.get(Calendar.HOUR_OF_DAY);
+        minutos = cal.get(Calendar.MINUTE) > 9 ? "" + cal.get(Calendar.MINUTE) : "0" + cal.get(Calendar.MINUTE);
+        segundos = cal.get(Calendar.SECOND) > 9 ? "" + cal.get(Calendar.SECOND) : "0" + cal.get(Calendar.SECOND);
+    }
+    
+    public void run(){
+        Thread current = Thread.currentThread();
 
+
+        for (int i = 1; i > 0; i++) {
+            if (i > 0) {
+                hora();
+                hour.setText(hora + ":" + minutos + ":" + segundos);
+            }
+        }
+    }
+  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,11 +71,14 @@ public class User extends javax.swing.JFrame {
         close = new javax.swing.JLabel();
         topbar = new javax.swing.JLabel();
         cartelera = new javax.swing.JLabel();
+        hour = new javax.swing.JLabel();
+        fecha = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         back.setBackground(new java.awt.Color(255, 255, 255));
+        back.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         back.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         close.setBackground(new java.awt.Color(255, 255, 255));
@@ -60,7 +96,7 @@ public class User extends javax.swing.JFrame {
                 closeMouseExited(evt);
             }
         });
-        back.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 40, 40));
+        back.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 40, 40));
 
         topbar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         topbar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -94,7 +130,17 @@ public class User extends javax.swing.JFrame {
                 carteleraMouseExited(evt);
             }
         });
-        back.add(cartelera, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 200, 100));
+        back.add(cartelera, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 200, 100));
+
+        hour.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 34)); // NOI18N
+        hour.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        hour.setText("00:00:00");
+        back.add(hour, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 180, 60));
+
+        fecha.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        fecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fecha.setText("DD/MM/YYYY");
+        back.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 150, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -157,6 +203,11 @@ public class User extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    public static String fecha(){
+        Date fecha=new Date();
+        SimpleDateFormat formatofecha=new SimpleDateFormat("dd/MM/YYYY");
+        return formatofecha.format(fecha);
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -193,6 +244,8 @@ public class User extends javax.swing.JFrame {
     private javax.swing.JPanel back;
     private javax.swing.JLabel cartelera;
     private javax.swing.JLabel close;
+    private javax.swing.JLabel fecha;
+    private javax.swing.JLabel hour;
     private javax.swing.JLabel topbar;
     // End of variables declaration//GEN-END:variables
 }

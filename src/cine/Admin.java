@@ -48,10 +48,7 @@ public class Admin extends javax.swing.JFrame implements Runnable {
 
     public void run() {
         Thread current = Thread.currentThread();
-//        while(current==hilo){
-//            hora();
-//            hour.setText(hora+":"+minutos+":"+segundos);
-//        }
+
 
         for (int i = 1; i > 0; i++) {
             if (i > 0) {

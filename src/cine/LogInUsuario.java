@@ -37,6 +37,7 @@ public class LogInUsuario extends javax.swing.JFrame {
     private void initComponents() {
 
         background = new javax.swing.JPanel();
+        volver = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
         topbar = new javax.swing.JLabel();
@@ -56,6 +57,24 @@ public class LogInUsuario extends javax.swing.JFrame {
         background.setBackground(new java.awt.Color(255, 255, 255));
         background.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        volver.setBackground(new java.awt.Color(255, 255, 255));
+        volver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        volver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Back Arrow_28px.png"))); // NOI18N
+        volver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        volver.setOpaque(true);
+        volver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                volverMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                volverMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                volverMouseExited(evt);
+            }
+        });
+        background.add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         title.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         title.setText("Inicio de Sesión: Usuario");
@@ -121,7 +140,7 @@ public class LogInUsuario extends javax.swing.JFrame {
         separatorpassw.setForeground(new java.awt.Color(255, 255, 255));
         background.add(separatorpassw, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 210, -1));
 
-        passwordfield.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 12)); // NOI18N
+        passwordfield.setFont(new java.awt.Font("Microsoft JhengHei UI", 0, 8)); // NOI18N
         passwordfield.setBorder(null);
         passwordfield.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -143,11 +162,12 @@ public class LogInUsuario extends javax.swing.JFrame {
         password.setText("Contraseña");
         background.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, -1, -1));
 
-        acceder.setBackground(new java.awt.Color(255, 255, 204));
-        acceder.setFont(new java.awt.Font("Microsoft New Tai Lue", 0, 13)); // NOI18N
+        acceder.setBackground(new java.awt.Color(255, 255, 255));
+        acceder.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 1, 13)); // NOI18N
+        acceder.setForeground(new java.awt.Color(51, 102, 255));
         acceder.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         acceder.setText("Acceder");
-        acceder.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        acceder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 102, 255)));
         acceder.setOpaque(true);
         acceder.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -303,11 +323,13 @@ public class LogInUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_accederMouseClicked
 
     private void accederMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accederMouseEntered
-        acceder.setBackground(new java.awt.Color(255, 204, 153));
+        acceder.setBackground(new Color(51,102,255));
+        acceder.setForeground(Color.WHITE);
     }//GEN-LAST:event_accederMouseEntered
 
     private void accederMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accederMouseExited
-        acceder.setBackground(new java.awt.Color(255, 255, 204));
+        acceder.setBackground(Color.WHITE);
+        acceder.setForeground(new Color(51,102,255));
     }//GEN-LAST:event_accederMouseExited
 
     private void crearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearMouseEntered
@@ -323,6 +345,20 @@ public class LogInUsuario extends javax.swing.JFrame {
         this.setVisible(false);
         ventana.setVisible(true);
     }//GEN-LAST:event_crearMouseClicked
+
+    private void volverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseClicked
+        LogIn u = new LogIn();
+        this.setVisible(false);
+        u.setVisible(true);
+    }//GEN-LAST:event_volverMouseClicked
+
+    private void volverMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseEntered
+        volver.setBackground(new Color(231, 231, 231));
+    }//GEN-LAST:event_volverMouseEntered
+
+    private void volverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMouseExited
+        volver.setBackground(new Color(255, 255, 255));
+    }//GEN-LAST:event_volverMouseExited
 
     /**
      * @param args the command line arguments
@@ -373,5 +409,6 @@ public class LogInUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel topbar;
     private javax.swing.JLabel user;
     private javax.swing.JTextField usertxt;
+    private javax.swing.JLabel volver;
     // End of variables declaration//GEN-END:variables
 }
