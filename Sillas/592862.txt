@@ -32,9 +32,9 @@ D1,true
 D2,true
 D3,true
 D4,false
-D5,true
-D6,true
-D7,true
+D5,false
+D6,false
+D7,false
 D8,false
 D9,true
 D10,true
@@ -42,10 +42,10 @@ E1,true
 E2,true
 E3,true
 E4,true
-E5,true
-E6,true
+E5,false
+E6,false
 E7,true
-E8,true
+E8,false
 E9,true
 E10,true
 F1,true
