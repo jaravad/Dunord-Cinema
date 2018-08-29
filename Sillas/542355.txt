@@ -21,7 +21,7 @@ B10,true
 C1,true
 C2,true
 C3,true
-C4,true
+C4,false
 C5,true
 C6,true
 C7,true
@@ -41,7 +41,7 @@ D10,true
 E1,true
 E2,true
 E3,true
-E4,true
+E4,false
 E5,true
 E6,true
 E7,true
